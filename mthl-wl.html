@@ -1,0 +1,1550 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="مقدمة إلى Struts 2 من خلال أمثلة">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/ar-struts2-janv-2012/mthl-wl.html">
+      
+      
+        <link rel="prev" href="mqdm.html">
+      
+      
+        <link rel="next" href="lmthl-02---qn-lmlmt-fy-ljr.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>2. مثال أول - مقدمة إلى Struts 2 من خلال أمثلة</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    var siteName = "مقدمة إلى Struts 2 من خلال أمثلة";
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+  </script>
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="مقدمة إلى Struts 2 من خلال أمثلة" class="md-header__button md-logo" aria-label="مقدمة إلى Struts 2 من خلال أمثلة" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            مقدمة إلى Struts 2 من خلال أمثلة
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. مثال أول
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الداكن"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الداكن" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="التبديل إلى الوضع الفاتح"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="التبديل إلى الوضع الفاتح" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://stahe.github.io/ar-struts2-janv-2012" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="مقدمة إلى Struts 2 من خلال أمثلة" class="md-nav__button md-logo" aria-label="مقدمة إلى Struts 2 من خلال أمثلة" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    مقدمة إلى Struts 2 من خلال أمثلة
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://stahe.github.io/ar-struts2-janv-2012" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    مرحبًا بكم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="mqdm.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. مقدمة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. مثال أول
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="mthl-wl.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. مثال أول
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. إنشاء المثال
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. المشروع الذي تم إنشاؤه في نظام الملفات
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-meta-infcontextxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3. ملف التكوين [META-INF/context.xml]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-web-infwebxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4. ملف التكوين [WEB-INF/web.xml]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-strutsxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5. ملف التكوين [struts.xml]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-helloworld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6. إجراء HelloWorld
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-helloworldjsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7. طريقة العرض HelloWorld.jsp
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8. تشغيل التطبيق
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9. الخلاصة
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-02---qn-lmlmt-fy-ljr.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. المثال 02 – حقن المعلمات في الإجراء
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-03---mfty-ltnql.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. المثال 03 – مفاتيح التنقل
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-04---ltdwyl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. المثال 04 – التدويل
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-05---nmwdhj-ldkhl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. المثال 05 – نموذج الإدخال
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-05b---ltnql-fy-nmwdhj-dkhl-lbynt.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. المثال 05B – التنقل في نموذج إدخال البيانات
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-06---ljls.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. المثال 06 – الجلسة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-07---lmt-lnmdhj.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. المثال 07 – علامات النماذج
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-08---llmt-lmrtb-blqwym.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. المثال 08 - العلامات المرتبطة بالقوائم
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-09---twyl-ldd-ly-wltqq-mn-th.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. المثال 09 - تحويل الأعداد الصحيحة والتحقق من صحتها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-09b---ltqq-mn--lnmwdhj.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. المثال 09B – التحقق من صحة النموذج
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-10---twyl-ldd-lqyqy-wltqq-mn-th.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. المثال 10 – تحويل الأعداد الحقيقية والتحقق من صحتها
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-11---twyl-ltrykh-wltqq-mn-th.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. المثال 11 – تحويل التاريخ والتحقق من صحته
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-12---twylt-wtqqt-mtnw.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    15. المثال 12 – تحويلات وتحققات متنوعة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-13---syq-ljr.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16. المثال 13 - سياق الإجراء
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lmthl-15---tkml-struts-2--spring.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    17. المثال 15 – تكامل Struts 2 / Spring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="drs-l-struts-2--tiles--spring--hibernate--mysql.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    18. دراسة حالة: Struts 2 / Tiles / Spring / Hibernate / MySQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="drs-l---ldr-1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19. دراسة حالة – الإصدار 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="drs-ll---ldr-2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20. دراسة الحالة – الإصدار 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lkhl.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    21. الخلاصة
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p><a id="refheading99631454977699"></a></p>
+<h1 id="2">2. <span style="color: #365f91">مثال أول</span></h1>
+<p>ستقتصر معظم أمثلةنا على طبقة الويب التي تم تنفيذها باستخدام <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004080000016CA6FD91FD.png" width="516" height="182" style="display:inline-block; margin:4px;width:13.653cm;height:4.815cm;" class="odt-zoomable" data-zoom-src="images/10000000000004080000016CA6FD91FD.png" /></td></tr></table>
+
+<p>بمجرد تغطية الأساسيات، سنقوم بدراسة مثال أكثر تعقيدًا باستخدام بنية متعددة الطبقات.</p>
+<p><a id="refheading99651454977699"></a></p>
+<h2 id="21">2.1. <span style="color: #4f81bd">إنشاء المثال</span></h2>
+<p>نحن بصدد إنشاء تطبيقنا الأول.</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E800000176113D1205.png" width="628" height="187" style="display:inline-block; margin:4px;width:16.616cm;height:4.948cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E800000176113D1205.png" /></td></tr></table>
+
+<ul>
+  <li>في [1]، نقوم بإنشاء مشروع جديد
+  </li>
+  <li>في [2]، نختار نوع <bdi dir="ltr" class="odt-ltr-term">Java Web</bdi> / <bdi dir="ltr" class="odt-ltr-term">Web Application</bdi>
+  </li>
+  <li>في [3]، قم بتسمية المشروع
+  </li>
+  <li>في [4]، حدد موقع المشروع.
+  </li>
+  <li>في [5]، نجعل المشروع الجديد هو المشروع الرئيسي.
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004A10000018090296FFE.png" width="593" height="192" style="display:inline-block; margin:4px;width:15.677cm;height:5.08cm;" class="odt-zoomable" data-zoom-src="images/10000000000004A10000018090296FFE.png" /></td></tr></table>
+
+<ul>
+  <li>في [6]، حدد خادم <bdi dir="ltr" class="odt-ltr-term">Tomcat.</bdi> عند تثبيت <bdi dir="ltr" class="odt-ltr-term">NetBeans 7.01</bdi>، تم تثبيت خادمين: <bdi dir="ltr" class="odt-ltr-term">Apache Tomcat</bdi> و <bdi dir="ltr" class="odt-ltr-term">GlassFish 3.1</bdi>.
+  </li>
+  <li>في [7]، حدد أنك ستعمل مع إطار عمل <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2. يتوفر هذا الخيار لأن المكون الإضافي <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 قد تم تثبيته. بدون المكون الإضافي، لا يتوفر إطار عمل <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2.
+  </li>
+  <li>في [8]، نطلب إنشاء المشروع النموذجي الذي سنقوم بدراسته.
+  </li>
+  <li>في [9]، يمكنك التحقق من مكتبات <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 التي سيتم استخدامها.
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052000000238141E0E1E.png" width="656" height="284" style="display:inline-block; margin:4px;width:17.357cm;height:7.514cm;" class="odt-zoomable" data-zoom-src="images/100000000000052000000238141E0E1E.png" /></td></tr></table>
+
+<ul>
+  <li>في [10]، المشروع الذي تم إنشاؤه. سنعود إلى هذا لاحقًا.
+  </li>
+  <li>في [11]، مكتبات المشروع. تم دمجها بواسطة المكون الإضافي <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2. إذا لم يكن لديك المكون الإضافي، يمكنك العثور على هذه المكتبات في المجلد [lib] الخاص بتوزيع <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 الذي تم تنزيله. ستتبع بعد ذلك الخطوتين 12 و 13.
+  </li>
+</ul>
+
+<p><a id="refheading99671454977699"></a></p>
+<h2 id="22">2.2. <span style="color: #4f81bd">المشروع الذي تم إنشاؤه في نظام الملفات</span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000032A0000023511DD8287.png" width="405" height="283" style="display:inline-block; margin:4px;width:10.716cm;height:7.475cm;" class="odt-zoomable" data-zoom-src="images/100000000000032A0000023511DD8287.png" /></td></tr></table>
+
+<ul>
+  <li>في [1]، تعرض علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Projects</bdi>] عرض &quot;المطور&quot; للمشروع
+  </li>
+  <li>في [2]، تعرض علامة التبويب [<bdi dir="ltr" class="odt-ltr-term">Files</bdi>] مجلد المشروع في نظام الملفات
+  </li>
+  <li>في [2A]، يتم تمثيل فرع [<bdi dir="ltr" class="odt-ltr-term">Web Pages</bdi>] في [2] بواسطة مجلد [web] [2B]
+  </li>
+  <li>في [3A]، يتم تمثيل فرع [حزم المصدر] في [2] بواسطة مجلد [<bdi dir="ltr" class="odt-ltr-term">java</bdi>] [3B]
+  </li>
+</ul>
+
+<p><a id="refheading99691454977699"></a></p>
+<h2 id="23-meta-infcontextxml">2.3. <span style="color: #4f81bd">ملف التكوين [<bdi dir="ltr" class="odt-ltr-term">META-INF/context.xml</bdi>]</span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000038D0000012A727BD6B9.png" width="455" height="149" style="display:inline-block; margin:4px;width:12.026cm;height:3.942cm;" class="odt-zoomable" data-zoom-src="images/100000000000038D0000012A727BD6B9.png" /></td></tr></table>
+
+<p>هذا الملف كما يلي:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;Context</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">antiJARLocking</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">true</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">path</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">/exemple-01</span><span style="color:#800080">&quot;/&gt;</span></span></span>
+</code></pre></div>
+
+<p>يشير السطر 2 إلى أن سياق تطبيق الويب هو <em>/<bdi dir="ltr" class="odt-ltr-term">example-01</bdi></em>. سيتم التعامل مع جميع عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> من النوع [<bdi dir="ltr" class="odt-ltr-term">http://machine:port/exemple-01/...</bdi>] بواسطة هذا التطبيق. يمكن العثور على هذا السياق في خصائص المشروع [2]: <em>انقر بزر الماوس الأيمن على المشروع / خصائص / تشغيل</em>.</p>
+<p><a id="refheading99711454977699"></a></p>
+<h2 id="24-web-infwebxml">2.4. <span style="color: #4f81bd">ملف التكوين [<bdi dir="ltr" class="odt-ltr-term">WEB-INF/web.xml</bdi>]</span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001320000011760484A44.png" width="153" height="140" style="display:inline-block; margin:4px;width:4.048cm;height:3.692cm;" class="odt-zoomable" data-zoom-src="images/10000000000001320000011760484A44.png" /></td></tr></table>
+
+<p>يتم تكوين كل تطبيق ويب بواسطة ملف [<bdi dir="ltr" class="odt-ltr-term">web.xml</bdi>] الموجود في مجلد [<bdi dir="ltr" class="odt-ltr-term">WEB-INF</bdi>] الخاص بالتطبيق. وفيما يلي الملف الذي تم إنشاؤه:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;web-app</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">version</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">3.0</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://java.sun.com/xml/ns/javaee</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns:xsi</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.w3.org/2001/XMLSchema-instance</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xsi:schemaLocation</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;filter&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;filter-name&gt;</span><span style="color:#000000">struts2</span><span style="color:#800080">&lt;/filter-name&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;filter-class&gt;</span><span style="color:#000000">org.apache.struts2.dispatcher.FilterDispatcher</span><span style="color:#800080">&lt;/filter-class&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/filter&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;filter-mapping&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;filter-name&gt;</span><span style="color:#000000">struts2</span><span style="color:#800080">&lt;/filter-name&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;url-pattern&gt;</span><span style="color:#000000">/*</span><span style="color:#800080">&lt;/url-pattern&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/filter-mapping&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;session-config&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;session-timeout&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            30</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;/session-timeout&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/session-config&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;welcome-file-list&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;welcome-file&gt;</span><span style="color:#000000">example/HelloWorld.jsp</span><span style="color:#800080">&lt;/welcome-file&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/welcome-file-list&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;/web-app&gt;</span></span>
+</code></pre></div>
+
+<p><span style="color: #800080"> </span></p>
+<ul>
+  <li>تحدد الأسطر 3-6 مرشحًا تم تنفيذه بواسطة فئة<span style="color: #000000"> <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 </span>[<span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">org.apache.struts2.dispatcher.FilterDispatcher</bdi>]. تعمل هذه الفئة كوحدة التحكم (<bdi dir="ltr" class="odt-ltr-term">C</bdi>) في نموذج <bdi dir="ltr" class="odt-ltr-term">MVC.</bdi></span>
+  </li>
+  <li><span style="color: #000000">الأسطر 7-10: تحدد التعيين بين نمط <bdi dir="ltr" class="odt-ltr-term">URL</bdi> والمرشح الذي يجب أن يتعامل مع عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطابقة لهذا النمط. هنا، تم تحديد أن أي عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> (نمط /*) يجب أن يتم التعامل معه بواسطة المرشح المسمى </span><i><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">struts2</bdi></span></i><span style="color: #000000">. هذا هو المرشح المحدد في الأسطر 3-6. وبالتالي، ستمر جميع عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> عبر وحدة التحكم <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2.</span>
+  </li>
+  <li><span style="color: #000000">الأسطر 11-15: تحدد مدة جلسة المستخدم، والتي تم تعيينها هنا على 30 دقيقة. أثناء الطلبات المختلفة، يتم تتبع المستخدم بواسطة رمز جلسة يتم تعيينه له عند طلبه الأول، والذي يرسله بعد ذلك بشكل منهجي مع كل طلب جديد. وهذا يسمح لخادم الويب بالتعرف على المستخدم وإدارة &quot;ذاكرة&quot; له، تُعرف باسم الجلسة. إذا مر أكثر من 30 دقيقة بين طلبين، يتم إنشاء رمز جلسة جديد للمستخدم، الذي يفقد بذلك &quot;ذاكرته&quot; ويبدأ واحدة جديدة.</span>
+  </li>
+  <li><span style="color: #000000">الأسطر 16-18: تحدد الملف الذي سيتم عرضه عندما يصل المستخدم إلى تطبيق الويب دون طلب مستند. وبالتالي، عندما يكون عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب هو [<bdi dir="ltr" class="odt-ltr-term">http://machine:port/exemple-01</bdi>]، سيكون عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي يتم تقديمه هو [<bdi dir="ltr" class="odt-ltr-term">http://machine:port/exemple-01/example/HelloWord.jsp</bdi>].</span>
+  </li>
+</ul>
+
+<p><a id="refheading99731454977699"></a></p>
+<h2 id="25-strutsxml">2.5. <span style="color: #4f81bd">ملف التكوين [<bdi dir="ltr" class="odt-ltr-term">struts.xml</bdi>]</span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001410000016021401E1E.png" width="161" height="176" style="display:inline-block; margin:4px;width:4.247cm;height:4.657cm;" class="odt-zoomable" data-zoom-src="images/10000000000001410000016021401E1E.png" /></td></tr></table>
+
+<p>ملف [<bdi dir="ltr" class="odt-ltr-term">struts.xml</bdi>] هو ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2. ويمكن وضعه في أي مكان في مسار <em><bdi dir="ltr" class="odt-ltr-term">ClassPath</bdi></em> الخاص بالمشروع. في مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> أعلاه، يتكون مسار <em><bdi dir="ltr" class="odt-ltr-term">ClassPath</bdi></em> الخاص بالمشروع من فرعين:</p>
+<ul>
+  <li>حزم المصادر
+  </li>
+  <li>المكتبات
+  </li>
+</ul>
+
+<p>وبالتالي، فإن أي مجلد أو مكتبة موجودة في هذين الفرعين تعد جزءًا من مسار <em><bdi dir="ltr" class="odt-ltr-term">ClassPath</bdi></em> للمشروع. ومن الشائع وضع ملف [<bdi dir="ltr" class="odt-ltr-term">struts.xml</bdi>] في &lt;الحزمة الافتراضية&gt;. وفيما يلي محتواه:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!DOCTYPE struts PUBLIC</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;struts&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;include</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">file</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">example.xml</span><span style="color:#800080">&quot;/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- Configuration for the default package. --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;package</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">default</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">extends</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/package&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;/struts&gt;</span></span>
+</code></pre></div>
+
+<ul>
+  <li>السطران 5 و 10: العلامة الجذرية للمستند هي العلامة &lt;<bdi dir="ltr" class="odt-ltr-term">struts</bdi>&gt;
+  </li>
+  <li>السطر 6: يتم إدراج ملف [<bdi dir="ltr" class="odt-ltr-term">example.xml</bdi>] هنا. وبالتالي، فإنه يجلب تكوينه الخاص. سنعود إلى هذا لاحقًا.
+  </li>
+  <li>السطران 8 و9: حدد حزمة باسم &quot;<bdi dir="ltr" class="odt-ltr-term">default</bdi>&quot; هنا. تتيح لك الحزمة تكوين مجموعة من إجراءات <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 التي تشترك في نفس عنوان <bdi dir="ltr" class="odt-ltr-term">URL.</bdi> على سبيل المثال، [/<bdi dir="ltr" class="odt-ltr-term">path/Action1</bdi>] و[/<bdi dir="ltr" class="odt-ltr-term">path/Action2</bdi>]. يمكنك بعد ذلك تحديد حزمة لهذه الإجراءات:
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;package</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">employes</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> namespace=&quot;/employes&quot; </span><span style="color:#808000">extends</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">... configuration</span><span style="color:#800080"></span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/package&gt;</span></span></span>
+</code></pre></div>
+
+<p><span style="color: #800080"> </span></p>
+<p>يُسمى الحزمة أعلاه &quot;<bdi dir="ltr" class="odt-ltr-term">employees</bdi>&quot; وتقوم بتكوين الإجراءات باستخدام عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <em>/<bdi dir="ltr" class="odt-ltr-term">employees/Action</bdi></em>. يمكن للحزمة أن ترث من حزمة أخرى باستخدام الكلمة الرئيسية &quot;<em><bdi dir="ltr" class="odt-ltr-term">extends</bdi></em>&quot;. في المثال أعلاه، ترث الحزمة <em>&quot;<bdi dir="ltr" class="odt-ltr-term">employees</bdi>&quot;</em> من الحزمة <em>&quot;<bdi dir="ltr" class="odt-ltr-term">struts-default</bdi>&quot;</em>. توجد هذه الحزمة في ملف [<bdi dir="ltr" class="odt-ltr-term">struts-default.xml</bdi>] داخل مكتبة <em><bdi dir="ltr" class="odt-ltr-term">struts2-core.jar</bdi></em>:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020A000001E9BAD98C48.png" width="261" height="244" style="display:inline-block; margin:4px;width:6.906cm;height:6.468cm;" class="odt-zoomable" data-zoom-src="images/100000000000020A000001E9BAD98C48.png" /></td></tr></table>
+
+<p>تقوم الحزمة &quot;<bdi dir="ltr" class="odt-ltr-term">struts-default</bdi>&quot; المحددة في ملف [<bdi dir="ltr" class="odt-ltr-term">struts-default.xml</bdi>] بتكوين عناصر متنوعة، بما في ذلك قائمة من المعترضات التي يتم تنفيذها عند استدعاء إجراء ما. دعونا نعود إلى بنية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> لتطبيق <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003E000000164F6B6995C.png" width="496" height="178" style="display:inline-block; margin:4px;width:13.123cm;height:4.71cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E000000164F6B6995C.png" /></td></tr></table>
+
+<p>لمعالجة عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> بالشكل [<bdi dir="ltr" class="odt-ltr-term">http://machine:port/.../Action</bdi>]، سيقوم وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">FilterDispatcher</bdi>] بإنشاء مثيل للفئة التي تنفذ الإجراء المطلوب وتنفيذ إحدى طرقها — بشكل افتراضي، طريقة تسمى <em><code>execute</code></em>. سيمر استدعاء طريقة <em><code>execute</code></em> هذه عبر سلسلة من المعترضات:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028F0000010554C43458.png" width="328" height="131" style="display:inline-block; margin:4px;width:8.666cm;height:3.454cm;" class="odt-zoomable" data-zoom-src="images/100000000000028F0000010554C43458.png" /></td></tr></table>
+
+<p>تقوم كل من المعترضات والإجراء بمعالجة نفس الطلب. وتكفي قائمة المعترضات المحددة في حزمة <em><bdi dir="ltr" class="odt-ltr-term">struts-default</bdi></em> في معظم الأحيان. ولذلك، ستقوم حزم <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> الخاصة بنا دائمًا بتوسيع حزمة <em><bdi dir="ltr" class="odt-ltr-term">struts-default</bdi></em>. لمعرفة وظائف المعترضات المختلفة، راجع الفصل 4 من [<strong><bdi dir="ltr" class="odt-ltr-term">ref2</bdi></strong>].</p>
+<p>لنعد إلى ملف التكوين <em><bdi dir="ltr" class="odt-ltr-term">struts.xml</bdi></em>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!DOCTYPE struts PUBLIC</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;struts&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;include</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">file</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">example.xml</span><span style="color:#800080">&quot;/&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">&lt;!-- Configuration for the default package. --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;package</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">default</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">extends</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/package&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;/struts&gt;</span></span>
+</code></pre></div>
+
+<ul>
+  <li>السطر 8: الحزمة المسماة <i>&quot;<bdi dir="ltr" class="odt-ltr-term">default</bdi>&quot; </i>لها دور خاص. فهي تتولى معالجة الإجراءات التي لم يتم تكوينها في الحزم الأخرى. هنا، في السطرين 8-9، لم يتم تحديد أي تكوين للحزمة <i>&quot;<bdi dir="ltr" class="odt-ltr-term">default</bdi>&quot;</i>. لذلك يمكننا إزالة تعريف هذه الحزمة.
+  </li>
+</ul>
+
+<p>الآن دعونا نلقي نظرة على ملف [<bdi dir="ltr" class="odt-ltr-term">example.xml</bdi>] المضمن في السطر 6 من ملف [<bdi dir="ltr" class="odt-ltr-term">struts.xml</bdi>]:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!DOCTYPE struts PUBLIC</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        &quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;struts&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;package</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">example</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">namespace</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">/example</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">extends</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">HelloWorld</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">example.HelloWorld</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#800080">&lt;result&gt;</span><span style="color:#000000">/example/HelloWorld.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;/action&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/package&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;/struts&gt;</span></span>
+</code></pre></div>
+
+<ul>
+  <li>السطر 8: يحدد حزمة باسم <i><bdi dir="ltr" class="odt-ltr-term">example</bdi> </i>تمتد من حزمة <i><bdi dir="ltr" class="odt-ltr-term">struts-default</bdi></i>. تتعامل هذه الحزمة مع عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> من النوع <i>/<bdi dir="ltr" class="odt-ltr-term">example/Action</bdi> </i>(مساحة الاسم <i>/<bdi dir="ltr" class="odt-ltr-term">example</bdi></i>).
+  </li>
+  <li>الأسطر 9-11: تحدد إجراءً باسم <i><bdi dir="ltr" class="odt-ltr-term">HelloWorld</bdi> </i>(سمة <i><bdi dir="ltr" class="odt-ltr-term">name</bdi></i>) يتوافق مع عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <i>/<bdi dir="ltr" class="odt-ltr-term">example/HelloWorld</bdi></i>. يتم التعامل مع هذا الإجراء بواسطة مثيل لفئة<i> <bdi dir="ltr" class="odt-ltr-term">example.HelloWorld</bdi> </i>(سمة <i><bdi dir="ltr" class="odt-ltr-term">class</bdi></i>).
+  </li>
+  <li>ستقوم وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">FilterDispatcher</bdi>] بتنفيذ طريقة <i><bdi dir="ltr" class="odt-ltr-term">execute</bdi> </i>لهذه الفئة.
+  </li>
+  <li>ستُرجع هذه الطريقة سلسلة تُسمى <b>مفتاح التنقل</b>.
+  </li>
+  <li>يجب تعريف مفاتيح التنقل المختلفة باستخدام علامات<i> &lt;<bdi dir="ltr" class="odt-ltr-term">result name</bdi>=&quot;key&quot;/&gt; </i>(السطر 10). إذا تم حذف السمة <bdi dir="ltr" class="odt-ltr-term">name</bdi>، يتم استخدام مفتاح <i><bdi dir="ltr" class="odt-ltr-term">success</bdi> </i>بشكل افتراضي. وهذا هو الحال أعلاه. لذلك، يجب أن تُرجع طريقة <i><bdi dir="ltr" class="odt-ltr-term">execute</bdi> </i>لفئة<i> <bdi dir="ltr" class="odt-ltr-term">example.HelloWorld</bdi> </i>مفتاح <i><bdi dir="ltr" class="odt-ltr-term">success</bdi> </i>إلى وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">FilterDispatcher</bdi>].
+  </li>
+  <li>ثم تعرض وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">FilterDispatcher</bdi>] الصفحة [/<bdi dir="ltr" class="odt-ltr-term">example/HelloWorld.jsp</bdi>] (السطر 10).
+  </li>
+</ul>
+
+<p>إذا قمنا بدمج الملفين [<bdi dir="ltr" class="odt-ltr-term">struts.xml</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">example.xml</bdi>] وإزالة الحزمة الافتراضية، التي تبدو غير ضرورية، فسيكون الأمر كما لو أننا قمنا بتقليص ملف [<bdi dir="ltr" class="odt-ltr-term">struts.xml</bdi>] إلى ملف [<bdi dir="ltr" class="odt-ltr-term">example.xml</bdi>] فقط.</p>
+<p><a id="refheading99751454977699"></a></p>
+<h2 id="26-helloworld">2.6. <span style="color: #4f81bd">إجراء <bdi dir="ltr" class="odt-ltr-term">HelloWorld</bdi></span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001750000010DA8AB37FB.png" width="187" height="135" style="display:inline-block; margin:4px;width:4.935cm;height:3.56cm;" class="odt-zoomable" data-zoom-src="images/10000000000001750000010DA8AB37FB.png" /></td></tr></table>
+
+<p>وفقًا لملف [<bdi dir="ltr" class="odt-ltr-term">struts.xml</bdi>] الذي درسناه، يتم تشغيل إجراء <em><bdi dir="ltr" class="odt-ltr-term">HelloWorld</bdi></em> عندما يكون عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي يطلبه العميل هو <em>/<bdi dir="ltr" class="odt-ltr-term">example/HelloWorld</bdi></em>. ثم يتم تنفيذ طريقة <em><bdi dir="ltr" class="odt-ltr-term">execute</bdi></em> الخاصة به. ويجب أن تعيد مفتاح تنقل. وقد رأينا أنه لم يكن هناك سوى <em>مفتاح</em> واحد: <bdi dir="ltr" class="odt-ltr-term">success</bdi>، وأن الصفحة <em>/<bdi dir="ltr" class="odt-ltr-term">example/HelloWorld.jsp</bdi></em> تم إرسالها استجابةً للمستخدم.</p>
+<p>فيما يلي كود إجراء <em><bdi dir="ltr" class="odt-ltr-term">HelloWorld</bdi></em>:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">package</span><span style="color:#008080"> </span><span style="color:#000000">example;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">import</span><span style="color:#008080"> </span><span style="color:#000000">com.opensymphony.xwork2.ActionSupport;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">class</span><span style="color:#008080"> </span><span style="color:#000000">HelloWorld</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">extends</span><span style="color:#008080"> </span><span style="color:#000000">ActionSupport</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">execute()</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">throws</span><span style="color:#008080"> </span><span style="color:#000000">Exception</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">        </span><span style="color:#000000">setMessage(getText(MESSAGE));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">        </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#000000">SUCCESS;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">static</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">final</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">MESSAGE</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#800000">&quot;HelloWorld.message&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">private</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">message;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="color:#000000">String</span><span style="color:#008080"> </span><span style="color:#000000">getMessage()</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">        </span><span style="font-weight:bold;color:#000000">return</span><span style="color:#008080"> </span><span style="color:#000000">message;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">public</span><span style="color:#008080"> </span><span style="font-weight:bold;color:#000000">void</span><span style="color:#008080"> </span><span style="color:#000000">setMessage(String</span><span style="color:#008080"> </span><span style="color:#000000">message)</span><span style="color:#008080"> </span><span style="color:#000000">{</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">        </span><span style="font-weight:bold;color:#000000">this</span><span style="color:#000000">.message</span><span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000000">message;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">}</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+</code></pre></div>
+
+<p><span style="color: #000000"> </span></p>
+<ul>
+  <li>السطر 5: تمتد فئة <i><bdi dir="ltr" class="odt-ltr-term">HelloWorld</bdi> </i>إلى فئة <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 <i><bdi dir="ltr" class="odt-ltr-term">ActionSupport</bdi></i>. وهذا هو الحال دائمًا تقريبًا. وهذا يسمح لنا باستخدام طرق معينة، مثل طريقة <i><bdi dir="ltr" class="odt-ltr-term">getText</bdi> </i>في السطر 8.
+  </li>
+  <li>الأسطر 7–10: طريقة <i>`<bdi dir="ltr" class="odt-ltr-term">execute</bdi>`</i>، التي يتم تنفيذها عند استدعاء وحدة التحكم <bdi dir="ltr" class="odt-ltr-term">Struts.</bdi> نعلم أنها يجب أن تُرجع سلسلة، ومن هنا توقيعها في السطر 7. هنا، تُرجع الثابت `<bdi dir="ltr" class="odt-ltr-term">SUCCESS</bdi>`، الذي تم تعريفه أيضًا في <i>`<bdi dir="ltr" class="odt-ltr-term">ActionSupport</bdi>`</i>. يتم تعريف الثوابت الأخرى بنفس الطريقة لنتيجة طريقة <i>`<bdi dir="ltr" class="odt-ltr-term">execute</bdi>`</i>:
+  </li>
+</ul>
+
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>الثابت
+</code></pre></div>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>القيمة
+</code></pre></div>
+</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><bdi dir="ltr" class="odt-ltr-term">SUCCESS</bdi></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&quot;<i><bdi dir="ltr" class="odt-ltr-term">success</bdi></i>&quot;</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">خطأ</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&quot;<i>خطأ</i>&quot;</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">الإدخال</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&quot;<i>الإدخال</i>&quot;</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">تسجيل الدخول</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">&quot;<i>تسجيل الدخول</i>&quot;</div></td></tr></table>
+
+<p>إذن هنا، تُرجع طريقة <em><bdi dir="ltr" class="odt-ltr-term">execute</bdi></em> السلسلة <em>&quot;<bdi dir="ltr" class="odt-ltr-term">success</bdi>&quot;</em>. وبالرجوع إلى ملف [<bdi dir="ltr" class="odt-ltr-term">struts.xml</bdi>]، يعني هذا أن الصفحة <em>/<bdi dir="ltr" class="odt-ltr-term">example/HelloWorld.jsp</bdi></em> ستُعرض للمستخدم.</p>
+<ul>
+  <li>السطر 8: تقوم طريقة <i><bdi dir="ltr" class="odt-ltr-term">execute</bdi> </i>بتهيئة حقل <i><bdi dir="ltr" class="odt-ltr-term">message</bdi> </i>في السطر 14 بقيمة <i><bdi dir="ltr" class="odt-ltr-term">getText</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">HelloWorld.message</bdi>&quot;)</i>. تنتمي طريقة <i><bdi dir="ltr" class="odt-ltr-term">getText</bdi> </i>إلى الفئة الأم <i><bdi dir="ltr" class="odt-ltr-term">ActionSupport</bdi></i>. وهي تسترد النص من ملف بناءً على اللغة المستخدمة. بشكل افتراضي، سيتم هنا استخدام ملف<i> <bdi dir="ltr" class="odt-ltr-term">package.properties</bdi> </i>الموجود في نفس الحزمة التي توجد بها العملية. يتوفر هذا الملف في نسختين:
+  </li>
+</ul>
+
+<p>ملف [<bdi dir="ltr" class="odt-ltr-term">package.properties</bdi>] كما يلي:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>HelloWorld.message= Struts is up and running ...
+</code></pre></div>
+<p>يتكون من سلسلة من الأسطر النصية بتنسيق <em>key=<bdi dir="ltr" class="odt-ltr-term">value</bdi></em>. إذا تم استخدام هذا الملف، فستُرجع <em><bdi dir="ltr" class="odt-ltr-term">getText</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">HelloWorld.message</bdi>&quot;)</em> القيمة <em><bdi dir="ltr" class="odt-ltr-term">Struts is up and running</bdi> ...</em></p>
+<p>ملف [<strong><bdi dir="ltr" class="odt-ltr-term">package</bdi>_es</strong>.<bdi dir="ltr" class="odt-ltr-term">properties</bdi>] هو كما يلي:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>HelloWorld.message= ¡Struts está bien! ...
+</code></pre></div>
+<p>إذا كانت اللغة المستخدمة من قبل متصفح العميل هي الإسبانية (السمة &quot;<strong>es</strong>&quot; في <strong><bdi dir="ltr" class="odt-ltr-term">package</bdi>_es</strong>.<bdi dir="ltr" class="odt-ltr-term">properties</bdi>)، فإن <em><bdi dir="ltr" class="odt-ltr-term">getText</bdi>(&quot;<bdi dir="ltr" class="odt-ltr-term">HelloWorld.message</bdi>&quot;)</em> ستُرجع القيمة <em>¡<bdi dir="ltr" class="odt-ltr-term">Struts está bien</bdi>! ...</em> وفي جميع الحالات الأخرى، سيتم استخدام ملف [<bdi dir="ltr" class="odt-ltr-term">package.properties</bdi>].</p>
+<p><a id="refheading99771454977699"></a></p>
+<h2 id="27-helloworldjsp">2.7. <span style="color: #4f81bd">طريقة العرض <bdi dir="ltr" class="odt-ltr-term">HelloWorld.jsp</bdi></span></h2>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000141000001196A3960D1.png" width="161" height="141" style="display:inline-block; margin:4px;width:4.247cm;height:3.718cm;" class="odt-zoomable" data-zoom-src="images/1000000000000141000001196A3960D1.png" /></td></tr></table>
+
+<p>هذه هي القطعة الأخيرة من أحجية <bdi dir="ltr" class="odt-ltr-term">Struts.</bdi> وهي طريقة العرض التي يتم عرضها عند طلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> /<bdi dir="ltr" class="odt-ltr-term">example/HelloWorld.</bdi> لقد رأينا المسار الذي سلكه الطلب الأولي حتى يتم عرض هذا الرد في النهاية. رمز الصفحة هو كما يلي:</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">page</span> <span style="color:#7f007f">contentType</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;text/html; charset=UTF-8&quot;</span> <span style="color:#bf5f3f">%&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#bf5f3f">&lt;%@</span> <span style="color:#3f7f7f">taglib</span> <span style="color:#7f007f">prefix</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;s&quot;</span> <span style="color:#7f007f">uri</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;/struts-tags&quot;</span> <span style="color:#bf5f3f">%&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:text</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;HelloWorld.message&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">title</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">head</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;&lt;</span><span style="color:#3f7f7f">s:property</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;message&quot;</span><span style="color:#008080">/&gt;&lt;/</span><span style="color:#3f7f7f">h2</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h3</span><span style="color:#008080">&gt;</span><span style="color:#000000">Languages</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">h3</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">ul</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">li</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;url&quot;</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;HelloWorld&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:param</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;request_locale&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">en</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">s:param</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">s:url</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:a</span> <span style="color:#7f007f">href</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;%{url}&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">English</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">s:a</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">li</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">li</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:url</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;url&quot;</span> <span style="color:#7f007f">action</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;HelloWorld&quot;</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:param</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;request_locale&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">es</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">s:param</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">s:url</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">                </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">s:a</span> <span style="color:#7f007f">href</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;%{url}&quot;</span><span style="color:#008080">&gt;</span><span style="color:#000000">Espanol</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">s:a</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">li</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">ul</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">body</span><span style="color:#008080">&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">html</span><span style="color:#008080">&gt;</span></span></span>
+</code></pre></div>
+
+<ul>
+  <li>تستخدم الصفحة علامات <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> (الأسطر 5 و6 و...) وعلامات من مكتبة محددة في السطر 3. تنتمي جميع علامات<b> &lt;<bdi dir="ltr" class="odt-ltr-term">s:xx</bdi>&gt; </b>إلى هذه المكتبة.
+  </li>
+  <li>السطر 7: تسمح لك علامة<b> &lt;<bdi dir="ltr" class="odt-ltr-term">s:text</bdi>&gt; </b>بعرض نص مختلف حسب لغة متصفح العميل. تحدد السمة <bdi dir="ltr" class="odt-ltr-term">name</bdi> المفتاح الذي يجب البحث عنه في ملفات الرسائل. هنا أيضًا، سيتم استخدام ملفات<i> <bdi dir="ltr" class="odt-ltr-term">package_xx.properties</bdi></i>. تذكر أنها تحتوي على رسالة واحدة فقط بالمفتاح <i><bdi dir="ltr" class="odt-ltr-term">HelloWorld.message</bdi></i>.
+  </li>
+  <li>السطر 11: تُستخدم علامة<b> &lt;<bdi dir="ltr" class="odt-ltr-term">s:property name</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">property</bdi>&quot;&gt; </b>لكتابة قيمة خاصية كائن يُسمى <i><bdi dir="ltr" class="odt-ltr-term">ActionContext</bdi></i>. يحتوي هذا الكائن على:
+  </li>
+  <li>خصائص الإجراء الذي تم تنفيذه. ستعرض<b> <bdi dir="ltr" class="odt-ltr-term">name</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">message</bdi>&quot; </b>قيمة حقل <b>الرسالة </b>للإجراء الحالي. تُستخدم طريقتا <i>get </i>و <i>set </i>المرتبطتان بالحقل لاسترداد قيمته أو تهيئته. لذلك يجب أن تكون هاتان الطريقتان موجودتين.
+  </li>
+  <li>سمات الطلب الحالي المشار إليها بـ <i>&lt;<bdi dir="ltr" class="odt-ltr-term">s:property name</bdi>=&quot;#<bdi dir="ltr" class="odt-ltr-term">request</bdi>[&#x27;key&#x27;]&quot;&gt;</i>
+  </li>
+  <li>سمات جلسة عمل المستخدم، المشار إليها بـ <i>&lt;<bdi dir="ltr" class="odt-ltr-term">s:property name</bdi>=&quot;#<bdi dir="ltr" class="odt-ltr-term">session</bdi>[&#x27;key&#x27;]&quot;&gt;</i>
+  </li>
+  <li>سمات التطبيق نفسه، المشار إليها بـ <i>&lt;<bdi dir="ltr" class="odt-ltr-term">s:property name</bdi>=&quot;#<bdi dir="ltr" class="odt-ltr-term">application</bdi>[&#x27;key&#x27;]&quot;&gt;</i>
+  </li>
+  <li>المعلمات المرسلة من متصفح العميل، المشار إليها بـ <i>&lt;<bdi dir="ltr" class="odt-ltr-term">s:property name</bdi>=&quot;#<bdi dir="ltr" class="odt-ltr-term">parameters</bdi>[&#x27;key&#x27;]&quot;&gt;</i>
+  </li>
+  <li>يعرض الترميز <i>&lt;<bdi dir="ltr" class="odt-ltr-term">s:property name</bdi>=&quot;#<bdi dir="ltr" class="odt-ltr-term">attr</bdi>[&#x27;key&#x27;]&quot;&gt; </i>قيمة كائن تم البحث عنه في الصفحة، والطلب، والجلسة، والتطبيق، بهذا الترتيب.
+  </li>
+  <li>الأسطر 16–18: تُستخدم علامة<b> &lt;<bdi dir="ltr" class="odt-ltr-term">s:url</bdi>&gt; </b>لتعريف عنوان <bdi dir="ltr" class="odt-ltr-term">URL.</bdi> تُعطِ السمة <b>id </b>اسمًا لعنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي سيتم إنشاؤه. ثم يُستخدم هذا الاسم في السطر 19. تحدد السمة <b><bdi dir="ltr" class="odt-ltr-term">action</bdi> </b>الإجراء الذي يجب أن يشير إليه عنوان <bdi dir="ltr" class="odt-ltr-term">URL.</bdi>
+  </li>
+  <li>السطر 17: تسمح لك العلامة<b> &lt;<bdi dir="ltr" class="odt-ltr-term">s:param</bdi> ..&gt; </b>بإضافة معلمات إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> بالشكل <i>?<bdi dir="ltr" class="odt-ltr-term">param1</bdi>=<bdi dir="ltr" class="odt-ltr-term">value1</bdi>&amp;<bdi dir="ltr" class="odt-ltr-term">param2</bdi>=<bdi dir="ltr" class="odt-ltr-term">value2</bdi>&amp;... </i>هنا، ستكون المعلمة المضافة هي <i>?<bdi dir="ltr" class="odt-ltr-term">request_locale</bdi>=es</i>.
+  </li>
+</ul>
+
+<p>في النهاية، سيكون عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الذي تم إنشاؤه كما يلي:</p>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
+<span class="odt-code-line"><span class="odt-code-line-content"><a href="view-source:http://localhost:8084/exemple-01/example/HelloWorld.action;jsessionid=2C90FEA191E7F1F95F4F86B0EAF75D52?request_locale=en"><span style="font-style:italic">/exemple-01/example/HelloWorld.action?request_locale=en</span></a></span></span>
+</code></pre></div>
+
+<p>لفهم عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> هذا، تذكر أن صفحة [<bdi dir="ltr" class="odt-ltr-term">HelloWorld.jsp</bdi>] تُعرض في حالتين:</p>
+<ul>
+  <li>عند الطلب المباشر لعنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [/<bdi dir="ltr" class="odt-ltr-term">example-01/example/HelloWorld.jsp</bdi>]
+  </li>
+  <li>عند طلب الإجراء [/<bdi dir="ltr" class="odt-ltr-term">example-01/example/HelloWorld.action</bdi>]
+  </li>
+</ul>
+
+<p>في كلتا الحالتين، يكون مسار عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> هو <em>/<bdi dir="ltr" class="odt-ltr-term">example-01/example.</bdi></em> تضيف العلامة <em>&lt;<bdi dir="ltr" class="odt-ltr-term">s:url action</bdi>= &quot;... &quot;&gt;</em> الإجراء المحدد بواسطة السمة <em><bdi dir="ltr" class="odt-ltr-term">action</bdi></em> إلى هذا المسار. وينتج عن ذلك <em>/<bdi dir="ltr" class="odt-ltr-term">example-01/example/HelloWorld</bdi></em>. ثم تضيف اللاحقة .<em><bdi dir="ltr" class="odt-ltr-term">action</bdi></em> إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> السابق، إلى جانب أي معلمات لعنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> إن وجدت. سيؤدي عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> الناتج <em>/<bdi dir="ltr" class="odt-ltr-term">example-01/example/HelloWorld.action</bdi>?<bdi dir="ltr" class="odt-ltr-term">request</bdi>_locale=en</em> إلى استدعاء الإجراء <em><bdi dir="ltr" class="odt-ltr-term">HelloWorld</bdi></em> المحدد في ملف [<bdi dir="ltr" class="odt-ltr-term">struts.xml</bdi>] مع تمرير المعلمة <em><bdi dir="ltr" class="odt-ltr-term">request</bdi>_locale=en</em>. لن تتم معالجة هذه المعلمة بواسطة الإجراء <em><bdi dir="ltr" class="odt-ltr-term">HelloWorld</bdi></em> بل بواسطة أحد معترضات <bdi dir="ltr" class="odt-ltr-term">Struts</bdi>، وتحديدًا المعترض الذي يتولى تدويل الصفحة. سيتم التعرف على المعلمة <em><bdi dir="ltr" class="odt-ltr-term">request</bdi>_locale</em> ومعالجتها. ستتغير لغة الصفحة إلى الإنجليزية (<em>en</em>).</p>
+<ul>
+  <li>السطر 19: يحدد رابط <bdi dir="ltr" class="odt-ltr-term">HTML.</bdi> تتوقع السمة <b><bdi dir="ltr" class="odt-ltr-term">href</bdi> </b>لعلامة<b> &lt;a&gt; </b>سلسلة نصية. هنا، نريد استخدام قيمة عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المحدد في السطر 16 بالمعرف <b>&quot;url&quot;</b>. للقيام بذلك، نكتب <i><bdi dir="ltr" class="odt-ltr-term">href</bdi>=&quot;%{url}&quot;</i>. يتم تقييم المتغير url، ويتم تعيين قيمته إلى السمة <i><bdi dir="ltr" class="odt-ltr-term">href</bdi></i>. في معظم الحالات، يكون تقييم المتغيرات ضمنيًا. على سبيل المثال، عندما نكتب
+  </li>
+</ul>
+
+<p><em>&lt;<bdi dir="ltr" class="odt-ltr-term">s:property name</bdi>=&quot;<bdi dir="ltr" class="odt-ltr-term">message</bdi>&quot;/&gt;</em></p>
+<p>يتم عرض قيمة خاصية <bdi dir="ltr" class="odt-ltr-term">message</bdi>، وليس السلسلة &quot;<em><bdi dir="ltr" class="odt-ltr-term">message</bdi></em>&quot;. ولكن في حالات أخرى، يجب عليك فرض تقييم المتغيرات أو الخصائص. لو كنا قد كتبنا <em><bdi dir="ltr" class="odt-ltr-term">href</bdi>=&quot;url&quot;</em>، لتم تعيين السلسلة &quot;<em>url</em>&quot; إلى السمة <em><bdi dir="ltr" class="odt-ltr-term">href</bdi></em>.</p>
+<ul>
+  <li>الأسطر 23–27: إنشاء رابط <bdi dir="ltr" class="odt-ltr-term">HTML</bdi> لتغيير لغة الصفحة إلى الإسبانية.
+  </li>
+</ul>
+
+<p><a id="refheading99791454977699"></a></p>
+<h2 id="28">2.8. <span style="color: #4f81bd">تشغيل التطبيق</span></h2>
+<p>نقوم بتشغيل المشروع:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003F30000015F311DBFC1.png" width="506" height="176" style="display:inline-block; margin:4px;width:13.376cm;height:4.644cm;" class="odt-zoomable" data-zoom-src="images/10000000000003F30000015F311DBFC1.png" /></td></tr></table>
+
+<ul>
+  <li>في [1]، نقوم بتشغيل مشروع [<bdi dir="ltr" class="odt-ltr-term">example-01</bdi>]. ثم يتم تشغيل خادم الويب <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> تلقائيًا إذا لم يكن قيد التشغيل بالفعل. يتم طلب عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [/<bdi dir="ltr" class="odt-ltr-term">example-01</bdi>] [3]. ثم يتم استخدام ملف [<bdi dir="ltr" class="odt-ltr-term">web.xml</bdi>]:
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;web-app</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">version</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">3.0</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://java.sun.com/xml/ns/javaee</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns:xsi</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.w3.org/2001/XMLSchema-instance</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xsi:schemaLocation</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;filter&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;filter-name&gt;</span><span style="color:#000000">struts2</span><span style="color:#800080">&lt;/filter-name&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;filter-class&gt;</span><span style="color:#000000">org.apache.struts2.dispatcher.FilterDispatcher</span><span style="color:#800080">&lt;/filter-class&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/filter&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;filter-mapping&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;filter-name&gt;</span><span style="color:#000000">struts2</span><span style="color:#800080">&lt;/filter-name&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;url-pattern&gt;</span><span style="color:#000000">/*</span><span style="color:#800080">&lt;/url-pattern&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/filter-mapping&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;session-config&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;session-timeout&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">            30</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;/session-timeout&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/session-config&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;welcome-file-list&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;welcome-file&gt;</span><span style="color:#000000">example/HelloWorld.jsp</span><span style="color:#800080">&lt;/welcome-file&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/welcome-file-list&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;/web-app&gt;</span></span>
+</code></pre></div>
+
+<p><span style="color: #800080"> </span></p>
+<ul>
+  <li>نظرًا لأن عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب [/<bdi dir="ltr" class="odt-ltr-term">example-01</bdi>] لا يحدد صفحة، سيستخدم <bdi dir="ltr" class="odt-ltr-term">Tomcat</bdi> العلامة<i> &lt;<bdi dir="ltr" class="odt-ltr-term">welcome_file-list</bdi>&gt; </i>في السطرين 16 و 18. وبالتالي، سيتم عرض عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> <i>/<bdi dir="ltr" class="odt-ltr-term">example-01/example/HelloWorld.jsp</bdi></i>.
+  </li>
+  <li>نظرًا لأن <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 يعالج جميع عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> (السطران 8 و 9)، سيتم تصفية عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> هذا بواسطة <bdi dir="ltr" class="odt-ltr-term">Struts.</bdi> وبما أنه لا يتوافق مع إجراء بل مع صفحة <bdi dir="ltr" class="odt-ltr-term">JSP</bdi>، فسيتم عرض هذه الأخيرة.
+  </li>
+  <li>لذلك، ما نراه في [2] هو صفحة<i> <bdi dir="ltr" class="odt-ltr-term">HelloWorld.jsp</bdi> </i>التي درسناها.
+  </li>
+  <li>في [4]، نرى أن العلامة <i><span style="color: #008080">&lt;</span></i><i><span style="color: #3f7f7f"><bdi dir="ltr" class="odt-ltr-term">title</bdi></span></i><i><span style="color: #008080">&gt;&lt;</span></i><i><span style="color: #3f7f7f"><bdi dir="ltr" class="odt-ltr-term">s:text</bdi> </span></i><i><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">name</bdi>=</span></i><i><span style="color: #2a00ff">&quot;<bdi dir="ltr" class="odt-ltr-term">HelloWorld.message</bdi>&quot;</span></i><i><span style="color: #008080">/&gt;&lt;</span></i><i><span style="color: #3f7f7f">/<bdi dir="ltr" class="odt-ltr-term">title</bdi></span></i><i><span style="color: #008080">&gt; </span></i>لم تصبح سارية المفعول، وكذلك العلامة <i><span style="color: #008080">&lt;</span></i><i><span style="color: #3f7f7f">h2</span></i><i><span style="color: #008080">&gt;&lt;</span></i><i><span style="color: #3f7f7f"><bdi dir="ltr" class="odt-ltr-term">s:property</bdi> </span></i><i><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">value</bdi>=</span></i><i><span style="color: #2a00ff">&quot;<bdi dir="ltr" class="odt-ltr-term">message</bdi>&quot;</span></i><i><span style="color: #008080">/&gt;&lt;</span></i><i><span style="color: #3f7f7f">/h2</span></i><i><span style="color: #008080">&gt;</span></i><span style="color: #008080">. </span>والسبب هو أنه لم يتم استدعاء أي إجراء. وبالتالي، لم يتم تنفيذ قائمة المعترضات التي تعمل قبل الإجراء، ولا سيما تلك التي تتعامل مع التدويل. لم يتم معالجة علامة التدويل <i>&lt;<bdi dir="ltr" class="odt-ltr-term">s:text</bdi> ...&gt; </i>بشكل صحيح. علاوة على ذلك، فإن خاصية الرسالة، التي تشير إلى حقل الرسالة في فئة <bdi dir="ltr" class="odt-ltr-term">Action1</bdi>، غير موجودة. ومن هنا عدم العرض.
+  </li>
+</ul>
+
+<p>الآن، دعونا نتبع الرابط [الإنجليزي]. نحصل على الصفحة التالية:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002F200000142F6A22481.png" width="377" height="161" style="display:inline-block; margin:4px;width:9.975cm;height:4.26cm;" class="odt-zoomable" data-zoom-src="images/10000000000002F200000142F6A22481.png" /></td></tr></table>
+
+<ul>
+  <li>في [1]، عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب. لقد أوضحنا كيف يتم تكوين عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> هذا. هذه المرة، يتم طلب إجراء <bdi dir="ltr" class="odt-ltr-term">Struts:</bdi> إجراء <i><bdi dir="ltr" class="odt-ltr-term">HelloWorld</bdi> </i>المحدد في [<bdi dir="ltr" class="odt-ltr-term">example.xml</bdi>].
+  </li>
+</ul>
+
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;struts&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;package</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">example</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">namespace</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">/example</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">extends</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">struts-default</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;action</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">HelloWorld</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">example.HelloWorld</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            </span><span style="color:#800080">&lt;result&gt;</span><span style="color:#000000">/example/HelloWorld.jsp</span><span style="color:#800080">&lt;/result&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#800080">&lt;/action&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/package&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;/struts&gt;</span></span>
+</code></pre></div>
+
+<ul>
+  <li>تم تنفيذ طريقة <i><bdi dir="ltr" class="odt-ltr-term">execute</bdi> </i>لهذا الإجراء. وقد رأينا أنها أعادت المفتاح <i>&quot;<bdi dir="ltr" class="odt-ltr-term">success</bdi></i>&quot;. من السطر 4 أعلاه، يمكننا استنتاج أن الصفحة <i>/<bdi dir="ltr" class="odt-ltr-term">example/HelloWorld.jsp</bdi> </i>يتم إرجاعها إلى العميل. وهذا ما نراه في [3].
+  </li>
+  <li>في [1]، نرى أن عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوب تم تعيينه بواسطة المعلمة <i>`<bdi dir="ltr" class="odt-ltr-term">request_locale</bdi>=en`</i>. ستكون لغة الصفحات الآن هي الإنجليزية. في الواقع، يتم تخزين اختيار اللغة هذا في جلسة عمل المستخدم، والتي ستحتفظ بهذا الاختيار حتى يقوم المستخدم بتغييره.
+  </li>
+  <li>في [2] و[3]، نرى التوطين قيد التنفيذ. وقد أصبحت العلامات <i><span style="color: #008080">&lt;</span></i><i><span style="color: #3f7f7f"><bdi dir="ltr" class="odt-ltr-term">title</bdi></span></i><i><span style="color: #008080">&gt;&lt;</span></i><i><span style="color: #3f7f7f"><bdi dir="ltr" class="odt-ltr-term">s:text</bdi> </span></i><i><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">name</bdi>=</span></i><i><span style="color: #2a00ff">&quot;<bdi dir="ltr" class="odt-ltr-term">HelloWorld.message</bdi>&quot;</span></i><i><span style="color: #008080">/&gt;&lt;</span></i><i><span style="color: #3f7f7f">/<bdi dir="ltr" class="odt-ltr-term">title</bdi></span></i><i><span style="color: #008080">&gt; </span></i>و<i><span style="color: #008080">&lt;</span></i><i><span style="color: #3f7f7f">h2</span></i><i><span style="color: #008080">&gt;&lt;</span></i><i><span style="color: #3f7f7f"><bdi dir="ltr" class="odt-ltr-term">s:property</bdi> </span></i><i><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">value</bdi>=</span></i><i><span style="color: #2a00ff">&quot;<bdi dir="ltr" class="odt-ltr-term">message</bdi>&quot;</span></i><i><span style="color: #008080">/&gt;&lt;</span></i><i><span style="color: #3f7f7f">/h2</span></i><i><span style="color: #008080">&gt; </span></i>سارية المفعول هذه المرة.
+  </li>
+</ul>
+
+<p>إذا اخترنا الآن الرابط [<bdi dir="ltr" class="odt-ltr-term">Espanol</bdi>]، فسنحصل على الصفحة باللغة الإسبانية:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002DE000001595CD6C033.png" width="367" height="172" style="display:inline-block; margin:4px;width:9.71cm;height:4.563cm;" class="odt-zoomable" data-zoom-src="images/10000000000002DE000001595CD6C033.png" /></td></tr></table>
+
+<p><a id="refheading99811454977699"></a></p>
+<h2 id="29">2.9. <span style="color: #4f81bd">الخلاصة</span></h2>
+<p>لقد قمنا بفحص مثال تم إنشاؤه تلقائيًا بواسطة المكون الإضافي <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 لـ <bdi dir="ltr" class="odt-ltr-term">NetBeans.</bdi> ووجدنا أنه كان من الصعب جدًا متابعة معالجة الطلب. وتشمل العملية العناصر التالية:</p>
+<ul>
+  <li>التكوين [<bdi dir="ltr" class="odt-ltr-term">web.xml</bdi>]، [<bdi dir="ltr" class="odt-ltr-term">struts.xml</bdi>]
+  </li>
+  <li>الإجراء المنفذ: المعترضات وطريقة <i>التنفيذ</i>.
+  </li>
+</ul>
+
+<p>في البداية، قد تبدو آليات <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 معقدة. يستغرق الأمر بعض الوقت للتعود عليها. سنقدم الآن سلسلة من الأمثلة، يوضح كل منها جانبًا محددًا من جوانب <bdi dir="ltr" class="odt-ltr-term">Struts.</bdi></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
+        </a>
+        <br>
+        هذا البرنامج التعليمي الذي كتبه <strong>Serge Tahé</strong> متاح للجمهور وفقًا لشروط
+<em>Creative Commons Attribution – Non-commercial –
+ShareAlike 3.0 Unported</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
