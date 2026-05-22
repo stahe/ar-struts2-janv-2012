@@ -1000,12 +1000,12 @@
 <p><a id="refheading100391454977699"></a></p>
 <h2 id="81">8.1. <span style="color: #4f81bd">مفهوم الجلسة</span></h2>
 <p>عندما يتصل متصفح العميل بتطبيق ويب لأول مرة، يتلقى رمز جلسة، وهو سلسلة فريدة من الأحرف يرسلها مع كل طلب جديد يوجهه إلى تطبيق الويب. وهذا يسمح لتطبيق الويب بالتعرف على متصفح العميل. يمكن لتطبيق الويب بعد ذلك ربط البيانات برمز الجلسة هذا. تنتمي هذه البيانات إلى متصفح عميل واحد. وبالتالي، مع قيام متصفح العميل بتوجيه الطلبات، يتم تكوين ذاكرة.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004770000010FF6B0E2AA.png" width="572" height="135" style="display:inline-block; margin:4px;width:15.122cm;height:3.584cm;" class="odt-zoomable" data-zoom-src="images/10000000000004770000010FF6B0E2AA.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004770000010FF6B0E2AA.png" width="572" height="135" style="display:inline-block; margin:4px;width:15.122cm;height:3.584cm;" class="odt-zoomable" data-zoom-src="images/10000000000004770000010FF6B0E2AA.png" /></td></tr></table>
 
 <p>كما هو موضح أعلاه، لكل مستخدم (متصفح) ذاكرته الخاصة، والتي تُعرف باسم جلسته. يتم مشاركة هذه الذاكرة بين جميع الطلبات الواردة من نفس المستخدم. هناك أيضًا ذاكرة أعلى مستوى تُسمى ذاكرة التطبيق. يتم مشاركة هذه الذاكرة بين جميع الطلبات الواردة من جميع المستخدمين. وهي عادةً ما تكون للقراءة فقط.</p>
 <p><a id="refheading100411454977699"></a></p>
 <h2 id="82-netbeans">8.2. <span style="color: #4f81bd">مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi></span></h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000490000001F532AB0F8B.png" width="584" height="251" style="display:inline-block; margin:4px;width:15.452cm;height:6.629cm;" class="odt-zoomable" data-zoom-src="images/1000000000000490000001F532AB0F8B.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000490000001F532AB0F8B.png" width="584" height="251" style="display:inline-block; margin:4px;width:15.452cm;height:6.629cm;" class="odt-zoomable" data-zoom-src="images/1000000000000490000001F532AB0F8B.png" /></td></tr></table>
 
 <p>تم إنشاء مشروع [<bdi dir="ltr" class="odt-ltr-term">example-06</bdi>] عن طريق نسخ مشروع [<bdi dir="ltr" class="odt-ltr-term">example-05</bdi>]. سنقوم بتغيير بعض العناصر</p>
 <ul>
@@ -1097,7 +1097,7 @@
 </code></pre></div>
 
 <ul>
-  <li>السطر 7: تُنفذ فئة [<bdi dir="ltr" class="odt-ltr-term">Confirm</bdi>] واجهة <b><bdi dir="ltr" class="odt-ltr-term">SessionAware</bdi></b>. تحتوي هذه الواجهة على طريقة واحدة فقط، وهي طريقة <b><bdi dir="ltr" class="odt-ltr-term">setSession</bdi> </b>في الأسطر 25–27. قبل استدعاء طريقة <bdi dir="ltr" class="odt-ltr-term">execute</bdi>، سيقوم أحد معترضات الطلبات، عبر طريقة <i><bdi dir="ltr" class="odt-ltr-term">setSession</bdi></i>، بإدخال جلسة عمل المستخدم في شكل قاموس<i> <bdi dir="ltr" class="odt-ltr-term">Map</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">String</bdi>, <bdi dir="ltr" class="odt-ltr-term">Object</bdi>&gt; </i>(السطر 25). نختار تخزين هذا القاموس في حقل <i><bdi dir="ltr" class="odt-ltr-term">session</bdi> </i>في السطر 12.
+  <li>السطر 7: تُنفذ فئة [<bdi dir="ltr" class="odt-ltr-term">Confirm</bdi>] واجهة <b><bdi dir="ltr" class="odt-ltr-term">SessionAware</bdi></b>. تحتوي هذه الواجهة على طريقة واحدة فقط، وهي طريقة <b><bdi dir="ltr" class="odt-ltr-term">setSession</bdi> </b>في الأسطر 25–27. قبل استدعاء طريقة <bdi dir="ltr" class="odt-ltr-term">execute</bdi>، سيقوم أحد معترضات الطلبات، عبر طريقة <i><bdi dir="ltr" class="odt-ltr-term">setSession</bdi></i>، بإدخال جلسة عمل المستخدم في شكل قاموس<i> <bdi dir="ltr" class="odt-ltr-term">Map</bdi>&lt;<bdi dir="ltr" class="odt-ltr-term">String, Object</bdi>&gt; </i>(السطر 25). نختار تخزين هذا القاموس في حقل <i><bdi dir="ltr" class="odt-ltr-term">session</bdi> </i>في السطر 12.
   </li>
   <li>الأسطر 30–34: طريقة `<i><bdi dir="ltr" class="odt-ltr-term">execute</bdi>` </i>الخاصة بالإجراء. عند تنفيذها، يكون حقل <i><bdi dir="ltr" class="odt-ltr-term">session</bdi> </i>قد تم تهيئته بواسطة أحد المعترضات، وحقل <i><bdi dir="ltr" class="odt-ltr-term">name</bdi> </i>بواسطة معترض آخر. نستخدم قاموس <i>الجلسة</i> هذا لتخزين حقل <i><bdi dir="ltr" class="odt-ltr-term">name</bdi></i>. وبالتالي، سيكون الاسم جزءًا من جلسة المستخدم ومتاحًا لجميع طلباته.
   </li>
@@ -1131,7 +1131,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BC0000019860FC6267.png" width="606" height="204" style="display:inline-block; margin:4px;width:16.034cm;height:5.398cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BC0000019860FC6267.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004BC0000019860FC6267.png" width="606" height="204" style="display:inline-block; margin:4px;width:16.034cm;height:5.398cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BC0000019860FC6267.png" /></td></tr></table>
 
 <p>في [1]، كان الاسم الذي تم إدخاله هو <em><bdi dir="ltr" class="odt-ltr-term">ST</bdi></em>. ونعلم أن الإجراء [<bdi dir="ltr" class="odt-ltr-term">Confirm</bdi>] وضع هذا الاسم في الجلسة. ينقلنا الرابط [2] إلى عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> [3]. يتم عرض طريقة العرض [<bdi dir="ltr" class="odt-ltr-term">Saisie.jsp</bdi>]. بالنسبة لحقل الإدخال، تسترد السمة <em>%{#<bdi dir="ltr" class="odt-ltr-term">attr</bdi>[&#x27;<bdi dir="ltr" class="odt-ltr-term">name</bdi>&#x27;]}</em> الاسم من الجلسة.</p>
 <ul>
@@ -1188,7 +1188,7 @@
 </ul>
 
 <p>لنرى كيف يعمل هذا:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005120000019296DA5187.png" width="649" height="201" style="display:inline-block; margin:4px;width:17.171cm;height:5.318cm;" class="odt-zoomable" data-zoom-src="images/10000000000005120000019296DA5187.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005120000019296DA5187.png" width="649" height="201" style="display:inline-block; margin:4px;width:17.171cm;height:5.318cm;" class="odt-zoomable" data-zoom-src="images/10000000000005120000019296DA5187.png" /></td></tr></table>
 
 <p>في [1]، نريد مسح حقل الإدخال. نضغط على زر [مسح].</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">

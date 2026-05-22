@@ -1092,7 +1092,7 @@
 <p><a id="refheading91644522158564"></a></p>
 <h1 id="11-09-">11. <span style="color: #365f91">المثال 09 - تحويل الأعداد الصحيحة والتحقق من صحتها</span></h1>
 <p>سنلقي الآن نظرة على سلسلة من الأمثلة حول تحويل معلمات النموذج والتحقق من صحتها. المشكلة هي كما يلي. لمعالجة عنوان <bdi dir="ltr" class="odt-ltr-term">URL</bdi> من النموذج [<bdi dir="ltr" class="odt-ltr-term">http://machine:port/.../Action</bdi>]، يقوم وحدة التحكم [<bdi dir="ltr" class="odt-ltr-term">FilterDispatcher</bdi>] بإنشاء مثيل للفئة التي تنفذ الإجراء المطلوب وتنفيذ إحدى طرقها — بشكل افتراضي، الطريقة المسماة <em><code>execute</code></em>. يمر استدعاء طريقة <em><bdi dir="ltr" class="odt-ltr-term">execute</bdi></em> هذه عبر سلسلة من المعترضات:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000293000000E838087670.png" width="330" height="116" style="display:inline-block; margin:4px;width:8.719cm;height:3.069cm;" class="odt-zoomable" data-zoom-src="images/1000000000000293000000E838087670.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000293000000E838087670.png" width="330" height="116" style="display:inline-block; margin:4px;width:8.719cm;height:3.069cm;" class="odt-zoomable" data-zoom-src="images/1000000000000293000000E838087670.png" /></td></tr></table>
 
 <p>يتم تعريف قائمة المعترضات في ملف [<bdi dir="ltr" class="odt-ltr-term">struts-default.xml</bdi>] الموجود في جذر أرشيف [<bdi dir="ltr" class="odt-ltr-term">struts2-core.jar</bdi>]. قائمة المعترضات المحددة هناك هي كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
@@ -1132,14 +1132,14 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>private int age ;
 </code></pre></div>
 <p>علاوة على ذلك، قد نرغب في تقييد العمر بين 1 و 150. وهذا يمثل مشكلة <strong>في التحقق من الصحة</strong>. يمكن تحويل المعلمة <em><code>parami</code></em> إلى النوع الصحيح دون أن تكون بالضرورة صالحة. لذلك، هناك خطوتان يجب إكمالهما. بالعودة إلى مخطط معالجة الطلب:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002A2000000F794588DC6.png" width="337" height="123" style="display:inline-block; margin:4px;width:8.916cm;height:3.267cm;" class="odt-zoomable" data-zoom-src="images/10000000000002A2000000F794588DC6.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002A2000000F794588DC6.png" width="337" height="123" style="display:inline-block; margin:4px;width:8.916cm;height:3.267cm;" class="odt-zoomable" data-zoom-src="images/10000000000002A2000000F794588DC6.png" /></td></tr></table>
 
 <p>سيتولى معتقلان معالجة <strong>تحويل</strong> المعلمات <strong>والتحقق</strong> من صحتها، على التوالي. إذا فشلت أي من الخطوتين، فلن ينتقل الطلب إلى الإجراء (المسار الأحمر أعلاه). يتم إعادة عرض النموذج الذي تم من خلاله إرسال المعلمات غير الصحيحة مع رسائل الخطأ.</p>
 <p>المعترضان المشاركان في تحويل المعلمات والتحقق من صحتها هما معترضان <em><bdi dir="ltr" class="odt-ltr-term">conversionError</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">validation</bdi></em> في السطرين 19 و 20 من قائمة المعترضين الموضحة سابقًا. لاحظ في الأسطر 20–22 أن معترض <em>التحقق من الصحة</em> لا يُطبق إذا كانت الطريقة المستدعاة هي إحدى طرق <em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">input</bdi> </span></em><span style="color: #000000">أو </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">back</bdi> </span></em><span style="color: #000000">أو </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">cancel</bdi> </span></em><span style="color: #000000">أو </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">browse</bdi></span></em><span style="color: #000000">. سنستخدم هذه الخاصية لاحقًا.</span></p>
 <p>سنبدأ بفحص تحويل الأعداد الصحيحة والتحقق من صحتها. سنقضي بعض الوقت في هذا المثال الأول لأن عملية التحقق من الصحة تتضمن العديد من العناصر. وبمجرد فهمنا لهذه العناصر، سننتقل بسرعة أكبر عبر الأمثلة التالية.</p>
 <p><a id="refheading91646522158564"></a></p>
 <h2 id="111">11.1. <span style="color: #4f81bd">النموذج</span></h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053700000248212F8657.png" width="668" height="292" style="display:inline-block; margin:4px;width:17.662cm;height:7.726cm;" class="odt-zoomable" data-zoom-src="images/100000000000053700000248212F8657.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000053700000248212F8657.png" width="668" height="292" style="display:inline-block; margin:4px;width:17.662cm;height:7.726cm;" class="odt-zoomable" data-zoom-src="images/100000000000053700000248212F8657.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، نموذج الإدخال
@@ -1151,7 +1151,7 @@
 <p><a id="refheading91648522158564"></a></p>
 <h2 id="112-netbeans">11.2. <span style="color: #4f81bd">مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi></span></h2>
 <p>مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> هو كما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000033600000219203A555D.png" width="411" height="268" style="display:inline-block; margin:4px;width:10.874cm;height:7.103cm;" class="odt-zoomable" data-zoom-src="images/100000000000033600000219203A555D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000033600000219203A555D.png" width="411" height="268" style="display:inline-block; margin:4px;width:10.874cm;height:7.103cm;" class="odt-zoomable" data-zoom-src="images/100000000000033600000219203A555D.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، العروض الثلاثة للتطبيق
@@ -1465,7 +1465,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">عرض [<bdi dir="ltr" class="odt-ltr-term">FormInt.jsp</bdi>] هو كما يلي:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005380000023F74BB859F.png" width="668" height="288" style="display:inline-block; margin:4px;width:17.674cm;height:7.608cm;" class="odt-zoomable" data-zoom-src="images/10000000000005380000023F74BB859F.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005380000023F74BB859F.png" width="668" height="288" style="display:inline-block; margin:4px;width:17.674cm;height:7.608cm;" class="odt-zoomable" data-zoom-src="images/10000000000005380000023F74BB859F.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -1527,7 +1527,7 @@
 <p><a id="refheading91662522158564"></a></p>
 <h3 id="1154-confirmationformintjsp">11.5.4. <span style="color: #4f81bd">طريقة العرض [<bdi dir="ltr" class="odt-ltr-term">ConfirmationFormInt.jsp</bdi>]</span></h3>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E3000001E2FA7D77F0.png" width="626" height="241" style="display:inline-block; margin:4px;width:16.551cm;height:6.376cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E3000001E2FA7D77F0.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004E3000001E2FA7D77F0.png" width="626" height="241" style="display:inline-block; margin:4px;width:16.551cm;height:6.376cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E3000001E2FA7D77F0.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">يتم عرضه عندما تكون جميع الإدخالات في النموذج [<bdi dir="ltr" class="odt-ltr-term">FormInt.jsp</bdi>] صالحة.</span></p>
@@ -1619,7 +1619,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">ستكون طريقة </span><em><span style="color: #000000">الإدخال </span></em><span style="color: #000000">لفئة [<bdi dir="ltr" class="odt-ltr-term">FormInt</bdi>] هي طريقة الإدخال لفئتها الأم، </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">ActionSupport</bdi></span></em><span style="color: #000000">. يتم تنفيذ طريقة </span><em><span style="color: #000000">الإدخال </span></em><span style="color: #000000">لفئة [<bdi dir="ltr" class="odt-ltr-term">FormInt</bdi>] بعد تنفيذ المعترضات</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002B3000000FBD96E1AC0.png" width="346" height="126" style="display:inline-block; margin:4px;width:9.142cm;height:3.321cm;" class="odt-zoomable" data-zoom-src="images/10000000000002B3000000FBD96E1AC0.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002B3000000FBD96E1AC0.png" width="346" height="126" style="display:inline-block; margin:4px;width:9.142cm;height:3.321cm;" class="odt-zoomable" data-zoom-src="images/10000000000002B3000000FBD96E1AC0.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">نحن نعلم أن استدعاء طريقة </span><em><span style="color: #000000">الإدخال </span></em><span style="color: #000000">يتم تجاهله بواسطة مانع التحقق من الصحة. لذلك، لن يتم إجراء أي تحقق من الصحة.</span></p>
@@ -1627,7 +1627,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">يتم عرض طريقة العرض [<bdi dir="ltr" class="odt-ltr-term">FormInt.jsp</bdi>]:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000518000001EEC8C97446.png" width="652" height="247" style="display:inline-block; margin:4px;width:17.251cm;height:6.535cm;" class="odt-zoomable" data-zoom-src="images/1000000000000518000001EEC8C97446.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000518000001EEC8C97446.png" width="652" height="247" style="display:inline-block; margin:4px;width:17.251cm;height:6.535cm;" class="odt-zoomable" data-zoom-src="images/1000000000000518000001EEC8C97446.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">في [2]، تعود حقول الإدخال إلى قيمها الافتراضية. قد يبدو هذا أمرًا طبيعيًا، لكنه ليس كذلك. نظرًا لاستدعاء الإجراء [<bdi dir="ltr" class="odt-ltr-term">FormInt</bdi>]، تم إنشاء مثيل للفئة [<bdi dir="ltr" class="odt-ltr-term">FormInt</bdi>] المرتبطة به. ولأن هذه الفئة تنفذ واجهة <bdi dir="ltr" class="odt-ltr-term">ModelDriven</bdi>، تم استدعاء طريقة </span><em><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">getModel</bdi></span></em><span style="color: #000000"> الخاصة بها:</span></p>
@@ -1650,7 +1650,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">يتم تشغيل الإجراء [<bdi dir="ltr" class="odt-ltr-term">FormInt</bdi>!<bdi dir="ltr" class="odt-ltr-term">clearModel</bdi>] بالنقر فوق الرابط [<bdi dir="ltr" class="odt-ltr-term">Clear Model</bdi>]:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051F000001D4ED32CA53.png" width="656" height="234" style="display:inline-block; margin:4px;width:17.344cm;height:6.191cm;" class="odt-zoomable" data-zoom-src="images/100000000000051F000001D4ED32CA53.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000051F000001D4ED32CA53.png" width="656" height="234" style="display:inline-block; margin:4px;width:17.344cm;height:6.191cm;" class="odt-zoomable" data-zoom-src="images/100000000000051F000001D4ED32CA53.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -1703,7 +1703,7 @@
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000">يتم تشغيل الإجراء [<bdi dir="ltr" class="odt-ltr-term">FormInt</bdi>!<bdi dir="ltr" class="odt-ltr-term">cancel</bdi>] بالنقر فوق الرابط [<bdi dir="ltr" class="odt-ltr-term">Cancel</bdi>]:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000535000002632D6D8EFF.png" width="667" height="305" style="display:inline-block; margin:4px;width:17.635cm;height:8.082cm;" class="odt-zoomable" data-zoom-src="images/1000000000000535000002632D6D8EFF.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000535000002632D6D8EFF.png" width="667" height="305" style="display:inline-block; margin:4px;width:17.635cm;height:8.082cm;" class="odt-zoomable" data-zoom-src="images/1000000000000535000002632D6D8EFF.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <ul>
@@ -1774,7 +1774,7 @@
 </ul>
 
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003290000020FFF036DAA.png" width="405" height="264" style="display:inline-block; margin:4px;width:10.703cm;height:6.973cm;" class="odt-zoomable" data-zoom-src="images/10000000000003290000020FFF036DAA.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003290000020FFF036DAA.png" width="405" height="264" style="display:inline-block; margin:4px;width:10.703cm;height:6.973cm;" class="odt-zoomable" data-zoom-src="images/10000000000003290000020FFF036DAA.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <p><span style="color: #000000"> </span></p>
@@ -1859,7 +1859,7 @@
 </ul>
 
 <p>لنرى كيف يعمل هذا:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052E000001FD94EDE2BC.png" width="663" height="255" style="display:inline-block; margin:4px;width:17.542cm;height:6.735cm;" class="odt-zoomable" data-zoom-src="images/100000000000052E000001FD94EDE2BC.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000052E000001FD94EDE2BC.png" width="663" height="255" style="display:inline-block; margin:4px;width:17.542cm;height:6.735cm;" class="odt-zoomable" data-zoom-src="images/100000000000052E000001FD94EDE2BC.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، إدخال غير صحيح لحقل <i><bdi dir="ltr" class="odt-ltr-term">int1</bdi></i>
@@ -1876,7 +1876,7 @@
 
 <p>لقد رأينا أن التحقق من صحة النموذج يؤدي إلى تشغيل طريقة [<bdi dir="ltr" class="odt-ltr-term">FormInt</bdi>].<em><bdi dir="ltr" class="odt-ltr-term">execute</bdi></em> <span style="color: #000000">إذا تمكن الطلب من اجتياز جميع المعترضات، ولا سيما معترض التحقق من الصحة:</span></p>
 <p><span style="color: #000000"> </span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002A4000000F60A1B9296.png" width="338" height="123" style="display:inline-block; margin:4px;width:8.943cm;height:3.254cm;" class="odt-zoomable" data-zoom-src="images/10000000000002A4000000F60A1B9296.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002A4000000F60A1B9296.png" width="338" height="123" style="display:inline-block; margin:4px;width:8.943cm;height:3.254cm;" class="odt-zoomable" data-zoom-src="images/10000000000002A4000000F60A1B9296.png" /></td></tr></table>
 
 <p><span style="color: #000000"> </span></p>
 <ul>
@@ -2084,7 +2084,7 @@
 </ul>
 
 <p>إذا تم العثور على أخطاء في نهاية عملية التحقق هذه، يتم إنهاء استدعاء طريقة [<bdi dir="ltr" class="odt-ltr-term">FormInt</bdi>].<em><bdi dir="ltr" class="odt-ltr-term">execute</bdi></em>، ويتم إرجاع مفتاح <em>الإدخال</em> إلى وحدة التحكم <bdi dir="ltr" class="odt-ltr-term">Struts.</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002DB000000F9DDAAD0DE.png" width="366" height="124" style="display:inline-block; margin:4px;width:9.671cm;height:3.293cm;" class="odt-zoomable" data-zoom-src="images/10000000000002DB000000F9DDAAD0DE.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000002DB000000F9DDAAD0DE.png" width="366" height="124" style="display:inline-block; margin:4px;width:9.671cm;height:3.293cm;" class="odt-zoomable" data-zoom-src="images/10000000000002DB000000F9DDAAD0DE.png" /></td></tr></table>
 
 <p><a id="refheading91670522158564"></a></p>
 <h2 id="117">11.7. <span style="color: #4f81bd">التفاصيل النهائية</span></h2>
@@ -2142,7 +2142,7 @@
 </code></pre></div>
 
 <p>على الرغم من اختلاف صياغتهما، تهدف قاعدتا التحقق من الصحة إلى التأكد من أن القيمة المدخلة هي عدد صحيح ضمن نطاق محدد. ومع ذلك، يختلف سلوك الحقلين <em><bdi dir="ltr" class="odt-ltr-term">int5</bdi></em> و <em><bdi dir="ltr" class="odt-ltr-term">int6</bdi></em> أثناء وقت التشغيل، كما هو موضح في لقطات الشاشة التالية:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053D000002BC59E9233D.png" width="671" height="350" style="display:inline-block; margin:4px;width:17.741cm;height:9.26cm;" class="odt-zoomable" data-zoom-src="images/100000000000053D000002BC59E9233D.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000053D000002BC59E9233D.png" width="671" height="350" style="display:inline-block; margin:4px;width:17.741cm;height:9.26cm;" class="odt-zoomable" data-zoom-src="images/100000000000053D000002BC59E9233D.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، نفس الإدخال غير الصحيح لكلا الحقلين

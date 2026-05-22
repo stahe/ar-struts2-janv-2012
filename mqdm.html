@@ -1027,7 +1027,7 @@
 <p><a id="refheading99511454977699"></a></p>
 <h2 id="11-struts-2">1.1. <span style="color: #4f81bd">دور <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 في تطبيق الويب</span></h2>
 <p>أولاً، دعونا نضع <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 في سياق تطوير تطبيق الويب. غالبًا ما يتم بناؤه على بنية متعددة المستويات مثل ما يلي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005120000010F52DA01EA.png" width="649" height="135" style="display:inline-block; margin:4px;width:17.171cm;height:3.584cm;" class="odt-zoomable" data-zoom-src="images/10000000000005120000010F52DA01EA.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005120000010F52DA01EA.png" width="649" height="135" style="display:inline-block; margin:4px;width:17.171cm;height:3.584cm;" class="odt-zoomable" data-zoom-src="images/10000000000005120000010F52DA01EA.png" /></td></tr></table>
 
 <ul>
 <li>طبقة [<strong>الويب</strong>] هي الطبقة التي تتعامل مع مستخدم تطبيق الويب. يتفاعل المستخدم مع تطبيق الويب من خلال صفحات الويب التي يعرضها المتصفح. <strong>ويقع <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 في هذه الطبقة، وفيها فقط</strong>.</li>
@@ -1036,16 +1036,16 @@
 <li>يمكن تحقيق تكامل الطبقات باستخدام حاوية <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> أو <bdi dir="ltr" class="odt-ltr-term">EJB3</bdi> (<bdi dir="ltr" class="odt-ltr-term">Enterprise JavaBeans</bdi>).</li>
 </ul>
 <p>ستستخدم معظم الأمثلة الواردة أدناه طبقة واحدة فقط، وهي طبقة [web]:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001CB000000DC8F508E6B.png" width="230" height="110" style="display:inline-block; margin:4px;width:6.073cm;height:2.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000001CB000000DC8F508E6B.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001CB000000DC8F508E6B.png" width="230" height="110" style="display:inline-block; margin:4px;width:6.073cm;height:2.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000001CB000000DC8F508E6B.png" /></td></tr></table>
 
 <p>ومع ذلك، ستختتم هذه الوثيقة بإنشاء تطبيق ويب متعدد الطبقات:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050900000109E756FF33.png" width="645" height="133" style="display:inline-block; margin:4px;width:17.053cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/100000000000050900000109E756FF33.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000050900000109E756FF33.png" width="645" height="133" style="display:inline-block; margin:4px;width:17.053cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/100000000000050900000109E756FF33.png" /></td></tr></table>
 
 <p>سيتم توفير طبقات [الأعمال] و[<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] و[<bdi dir="ltr" class="odt-ltr-term">JPA/Hibernate</bdi>] لنا كأرشيف <bdi dir="ltr" class="odt-ltr-term">JAR</bdi>، بحيث لا يتعين علينا، مرة أخرى، سوى بناء طبقة [الويب].</p>
 <p><a id="refheading99531454977699"></a></p>
 <h2 id="12-struts-2-mvc">1.2. <span style="color: #4f81bd">نموذج تطوير <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 <bdi dir="ltr" class="odt-ltr-term">MVC</bdi></span></h2>
 <p>يُنفذ <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 نمط الهندسة المعمارية <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> (النموذج – العرض – وحدة التحكم) على النحو التالي:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046D0000016F5978A320.png" width="567" height="184" style="display:inline-block; margin:4px;width:14.99cm;height:4.856cm;" class="odt-zoomable" data-zoom-src="images/100000000000046D0000016F5978A320.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000046D0000016F5978A320.png" width="567" height="184" style="display:inline-block; margin:4px;width:14.99cm;height:4.856cm;" class="odt-zoomable" data-zoom-src="images/100000000000046D0000016F5978A320.png" /></td></tr></table>
 
 <p>تتم معالجة طلب العميل على النحو التالي:</p>
 <p>تكون عناوين <bdi dir="ltr" class="odt-ltr-term">URL</bdi> المطلوبة على الشكل <em><bdi dir="ltr" class="odt-ltr-term">http://machine:port/contexte/rep1/rep2/.../Action.</bdi></em> يجب أن يتطابق المسار [<em>/<bdi dir="ltr" class="odt-ltr-term">rep1/rep2/.../Action</bdi></em>] مع إجراء محدد في ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2؛ وإلا، يتم رفضه. يتم تعريف الإجراء في ملف <bdi dir="ltr" class="odt-ltr-term">XML</bdi> بالصيغة التالية:</p>
@@ -1107,15 +1107,15 @@
 </ol>
 
 <p>الآن، دعونا نوضح العلاقة بين بنية الويب <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> والبنية الطبقية. في الواقع، هذان مفهومان مختلفان يتم الخلط بينهما أحيانًا. لنأخذ تطبيق ويب <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 أحادي الطبقة:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003E70000016B4696B1A1.png" width="500" height="182" style="display:inline-block; margin:4px;width:13.217cm;height:4.803cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E70000016B4696B1A1.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000003E70000016B4696B1A1.png" width="500" height="182" style="display:inline-block; margin:4px;width:13.217cm;height:4.803cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E70000016B4696B1A1.png" /></td></tr></table>
 
 <p>إذا قمنا بتنفيذ الطبقة [الويب] باستخدام <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2، فسنحصل بالفعل على بنية ويب <bdi dir="ltr" class="odt-ltr-term">MVC</bdi> ولكن ليس بنية متعددة الطبقات. هنا، ستتولى الطبقة [الويب] كل شيء: العرض، ومنطق الأعمال، والوصول إلى البيانات. مع <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2، فإن فئات [<bdi dir="ltr" class="odt-ltr-term">Action</bdi>] هي التي ستؤدي هذا العمل.</p>
 <p>الآن، دعونا نفكر في بنية ويب متعددة الطبقات:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048C0000010A4681095B.png" width="582" height="133" style="display:inline-block; margin:4px;width:15.399cm;height:3.519cm;" class="odt-zoomable" data-zoom-src="images/100000000000048C0000010A4681095B.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000048C0000010A4681095B.png" width="582" height="133" style="display:inline-block; margin:4px;width:15.399cm;height:3.519cm;" class="odt-zoomable" data-zoom-src="images/100000000000048C0000010A4681095B.png" /></td></tr></table>
 
 <p>يمكن تنفيذ طبقة [الويب] بدون إطار عمل وبدون اتباع نموذج <bdi dir="ltr" class="odt-ltr-term">MVC.</bdi> وبذلك نحصل على بنية متعددة الطبقات، لكن طبقة الويب لا تنفذ نموذج <bdi dir="ltr" class="odt-ltr-term">MVC.</bdi></p>
 <p>في <bdi dir="ltr" class="odt-ltr-term">MVC</bdi>، قلنا إن نموذج <bdi dir="ltr" class="odt-ltr-term">M</bdi> هو نموذج عرض <bdi dir="ltr" class="odt-ltr-term">V</bdi>، أي مجموعة البيانات التي يعرضها عرض <bdi dir="ltr" class="odt-ltr-term">V.</bdi> أحيانًا (في كثير من الأحيان)، يُعطى تعريف آخر لنموذج <bdi dir="ltr" class="odt-ltr-term">M</bdi> في <bdi dir="ltr" class="odt-ltr-term">MVC:</bdi></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C700000109249566B9.png" width="612" height="133" style="display:inline-block; margin:4px;width:16.18cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C700000109249566B9.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004C700000109249566B9.png" width="612" height="133" style="display:inline-block; margin:4px;width:16.18cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C700000109249566B9.png" /></td></tr></table>
 
 <p>يعتبر العديد من المؤلفين أن ما يقع على يمين طبقة [الويب] يشكل نموذج <bdi dir="ltr" class="odt-ltr-term">M</bdi> في <bdi dir="ltr" class="odt-ltr-term">MVC.</bdi> لتجنب الغموض، يمكننا الإشارة إلى:</p>
 <ul>
@@ -1146,14 +1146,14 @@
 <p><a id="refheading99591454977699"></a></p>
 <h3 id="132-struts-2">1.3.2. <span style="color: #4f81bd">مكون <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 الإضافي</span></h3>
 <p>اعتمادًا على إصدار <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi>، لم يكن هذا المكون الإضافي متاحًا دائمًا. اعتبارًا من ديسمبر 2011، يمكن العثور عليه على الرابط [<a href="http://plugins.netbeans.org/plugin/39218"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">http://plugins.netbeans.org</bdi></span></u></a>]. يسرد هذا الرابط المكونات الإضافية المختلفة المتاحة لـ <bdi dir="ltr" class="odt-ltr-term">NetBeans.</bdi> يمكنك تصفية البحث. في [1]، نبحث عن المكونات الإضافية التي تحتوي على كلمة &quot;<bdi dir="ltr" class="odt-ltr-term">struts</bdi>&quot; في اسمها.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042C000001632EB5D944.png" width="534" height="177" style="display:inline-block; margin:4px;width:14.129cm;height:4.695cm;" class="odt-zoomable" data-zoom-src="images/100000000000042C000001632EB5D944.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000042C000001632EB5D944.png" width="534" height="177" style="display:inline-block; margin:4px;width:14.129cm;height:4.695cm;" class="odt-zoomable" data-zoom-src="images/100000000000042C000001632EB5D944.png" /></td></tr></table>
 
 <ul>
   <li>اتبع الرابط [2]
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000520000003DEAEE6F124.png" width="656" height="495" style="display:inline-block; margin:4px;width:17.357cm;height:13.097cm;" class="odt-zoomable" data-zoom-src="images/1000000000000520000003DEAEE6F124.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000520000003DEAEE6F124.png" width="656" height="495" style="display:inline-block; margin:4px;width:17.357cm;height:13.097cm;" class="odt-zoomable" data-zoom-src="images/1000000000000520000003DEAEE6F124.png" /></td></tr></table>
 
 <p>قم بتنزيل المكون الإضافي وفك ضغطه [2]. لدمجه في <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi>، اتبع الخطوات التالية:</p>
 <ul>
@@ -1161,7 +1161,7 @@
   </li>
 </ul>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051E000001D69B7E53DF.png" width="655" height="235" style="display:inline-block; margin:4px;width:17.33cm;height:6.218cm;" class="odt-zoomable" data-zoom-src="images/100000000000051E000001D69B7E53DF.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000051E000001D69B7E53DF.png" width="655" height="235" style="display:inline-block; margin:4px;width:17.33cm;height:6.218cm;" class="odt-zoomable" data-zoom-src="images/100000000000051E000001D69B7E53DF.png" /></td></tr></table>
 
 <ul>
   <li>في [1]، حدد قائمة &quot;أدوات/المكونات الإضافية&quot;
@@ -1178,7 +1178,7 @@
 <p><a id="refheading99611454977699"></a></p>
 <h3 id="133-struts-2">1.3.3. <span style="color: #4f81bd">مكتبات <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2</span></h3>
 <p>إذا قمت بتنزيل المكون الإضافي <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 لـ <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi>، فستكون لديك مكتبات <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> الرئيسية ولكن ليس كلها. لاحقًا، سنحتاج إلى مكتبات معينة متوفرة على موقع <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 [<a href="http://struts.apache.org/"><u><span style="color: #0563c1"><bdi dir="ltr" class="odt-ltr-term">http://struts.apache.org/</bdi></span></u></a>].</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000538000002CF9F9ED3C6.png" width="668" height="360" style="display:inline-block; margin:4px;width:17.674cm;height:9.513cm;" class="odt-zoomable" data-zoom-src="images/1000000000000538000002CF9F9ED3C6.png" /></td></tr></table>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000538000002CF9F9ED3C6.png" width="668" height="360" style="display:inline-block; margin:4px;width:17.674cm;height:9.513cm;" class="odt-zoomable" data-zoom-src="images/1000000000000538000002CF9F9ED3C6.png" /></td></tr></table>
 
 <p>اتبع الرابط [1] ثم الرابط [2] لتنزيل ملف zip الخاص بالإصدار 2.2.3.1. بمجرد فك ضغط التوزيع، يمكن العثور على المكتبات المطلوبة من قبل <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> في مجلد [lib] [3] الخاص بالتوزيع. هناك العشرات منها، لذا يطرح السؤال حول أي منها ضروري. وهنا سيساعدنا المكون الإضافي <bdi dir="ltr" class="odt-ltr-term">Struts.</bdi></p>
 
