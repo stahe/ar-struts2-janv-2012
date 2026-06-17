@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/ar-struts2-janv-2012/lmthl-09b---ltqq-mn--lnmwdhj.html">
+        <link rel="canonical" href="https://stahe.github.io/ar-struts2-janv-2012/mthl-09b---ltqq-mn--lnmwdhj.html">
       
       
         <link rel="prev" href="lmthl-09---twyl-ldd-ly-wltqq-mn-th.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>12. المثال 09B – التحقق من صحة النموذج - مقدمة إلى Struts 2 من خلال أمثلة</title>
+        <title>12. مثال 09B – التحقق من صحة النموذج - مقدمة إلى Struts 2 من خلال أمثلة</title>
       
     
     
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              12. المثال 09B – التحقق من صحة النموذج
+              12. مثال 09B – التحقق من صحة النموذج
             
           </span>
         </div>
@@ -467,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="lmthl-05b---ltnql-fy-nmwdhj-dkhl-lbynt.html" class="md-nav__link">
+      <a href="mthl-05b---ltnql-fy-nmwdhj-ldkhl.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. المثال 05B – التنقل في نموذج إدخال البيانات
+    7. مثال 05B – التنقل في نموذج الإدخال
   
 
     
@@ -611,14 +611,14 @@
         
       
       
-      <a href="lmthl-09b---ltqq-mn--lnmwdhj.html" class="md-nav__link md-nav__link--active">
+      <a href="mthl-09b---ltqq-mn--lnmwdhj.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. المثال 09B – التحقق من صحة النموذج
+    12. مثال 09B – التحقق من صحة النموذج
   
 
     
@@ -666,14 +666,14 @@
   
   
     <li class="md-nav__item">
-      <a href="lmthl-11---twyl-ltrykh-wltqq-mn-th.html" class="md-nav__link">
+      <a href="lmthl-11---twyl-ltwrykh-wltqq-mn-th.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. المثال 11 – تحويل التاريخ والتحقق من صحته
+    14. المثال 11 – تحويل التواريخ والتحقق من صحتها
   
 
     
@@ -693,14 +693,14 @@
   
   
     <li class="md-nav__item">
-      <a href="lmthl-12---twylt-wtqqt-mtnw.html" class="md-nav__link">
+      <a href="lmthl-12---mlyt-ltwyl-wltqq-mn-l-lmtnw.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. المثال 12 – تحويلات وتحققات متنوعة
+    15. المثال 12 – عمليات التحويل والتحقق من الصحة المتنوعة
   
 
     
@@ -892,39 +892,38 @@
 
 
 
-<p><a id="refheading91674522158564"></a></p>
-<h1 id="12-09b">12. <span style="color: #365f91">المثال 09B – التحقق من صحة النموذج</span></h1>
-<p><span style="color: #000000"> </span></p>
+<p><span id="refheading91674522158564" name="refheading91674522158564" class="odt-bookmark-anchor"></span></p>
+<h1 id="12-09b">12. <span style="color: #365f91">مثال 09B – التحقق من صحة النموذج</span></h1>
 <p><span style="color: #000000">التطبيق التالي هو نسخة معدلة من التطبيق السابق. في السابق، بالنسبة للإجراء </span><strong><span style="color: #000000"><bdi dir="ltr" class="odt-ltr-term">A</bdi></span></strong><span style="color: #000000">:</span></p>
 <ul>
-  <li>كان اسم ملف قواعد التحقق <b><bdi dir="ltr" class="odt-ltr-term">A-validation.xml</bdi></b>
+  <li>كان اسم ملف قواعد التحقق من الصحة هو <b><bdi dir="ltr" class="odt-ltr-term">A-validation.xml</bdi></b>
   </li>
-  <li>كان ملف رسائل أخطاء التحقق من الصحة يسمى <b><bdi dir="ltr" class="odt-ltr-term">A.properties</bdi></b>
+  <li>كان اسم ملف رسائل أخطاء التحقق من صحة النموذج هو <b><bdi dir="ltr" class="odt-ltr-term">A.properties</bdi></b>
   </li>
 </ul>
 
-<p>هنا، بالنسبة للإجراء <strong><bdi dir="ltr" class="odt-ltr-term">A</bdi></strong> للنموذج <strong><bdi dir="ltr" class="odt-ltr-term">M</bdi></strong>:</p>
+<p>هنا، بالنسبة للإجراء <strong><bdi dir="ltr" class="odt-ltr-term">A</bdi></strong> من النموذج <strong><bdi dir="ltr" class="odt-ltr-term">M</bdi></strong>:</p>
 <ul>
   <li>يُسمى ملف قواعد التحقق من الصحة <b><bdi dir="ltr" class="odt-ltr-term">M-validation.xml</bdi></b>
   </li>
-  <li>ملف رسائل أخطاء التحقق من الصحة يسمى <b><bdi dir="ltr" class="odt-ltr-term">M.properties</bdi></b>
+  <li>ملف رسائل أخطاء التحقق يُسمى <b><bdi dir="ltr" class="odt-ltr-term">M.properties</bdi></b>
   </li>
-  <li>لا يزال ملف<b> <bdi dir="ltr" class="odt-ltr-term">A-validation.xml</bdi> </b>موجودًا، لكن محتوياته تعيد توجيه قواعد التحقق إلى ملف<b> <bdi dir="ltr" class="odt-ltr-term">M-validation.xml</bdi></b>.
+  <li>لا يزال الملف <b><bdi dir="ltr" class="odt-ltr-term">A-validation.xml</bdi> </b>موجودًا، ولكن محتواه يعيد توجيه قواعد التحقق من الصحة إلى الملف <b><bdi dir="ltr" class="odt-ltr-term">M-validation.xml</bdi></b>.
   </li>
 </ul>
 
 <p>هذه هي التغييرات الوحيدة التي سنجريها على الإصدار السابق.</p>
-<p>مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> هو كما يلي:</p>
+<p>مشروع <bdi dir="ltr" class="odt-ltr-term">NetBeans</bdi> هو التالي:</p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000001830000017319E91CC2.png" width="194" height="186" style="display:inline-block; margin:4px;width:5.121cm;height:4.909cm;" class="odt-zoomable" data-zoom-src="images/10000000000001830000017319E91CC2.png" /></td></tr></table>
 
 <ul>
-  <li>في [1]، الإجراء [<bdi dir="ltr" class="odt-ltr-term">FormInt</bdi>] وملف التحقق من صحة البيانات الخاص به
+  <li>إلى [1]، والإجراء [<bdi dir="ltr" class="odt-ltr-term">FormInt</bdi>] وملف التحقق الخاص به
   </li>
-  <li>في [2]، نموذجه [<bdi dir="ltr" class="odt-ltr-term">FormIntModel</bdi>]، وملف التحقق من صحة هذا النموذج، والرسائل المرتبطة بهذا النموذج.
+  <li>إلى [2]، ونموذجه [<bdi dir="ltr" class="odt-ltr-term">FormIntModel</bdi>]، وملف التحقق الخاص بهذا النموذج، والرسائل المرتبطة بهذا النموذج.
   </li>
 </ul>
 
-<p>كل شيء آخر مطابق للإصدار السابق.</p>
+<p>كل ما عدا ذلك مطابق للإصدار السابق.</p>
 <p>ملف [<bdi dir="ltr" class="odt-ltr-term">FormInt-validation.xml</bdi>] هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;!--</span></span>
@@ -932,8 +931,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content">EN&quot; &quot;http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd&quot;&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">--&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">validators</span> <span style="color:#808080">PUBLIC</span> <span style="color:#008080">&quot;-//OpenSymphony Group//XWork Validator 1.0.2//</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">EN&quot;</span> <span style="color:#3f7f5f">&quot;http://localhost:8084/exemple-09B/example/xwork-validator-1.0.2.dtd&quot;</span><span style="color:#008080">&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">EN&quot; &quot;http://localhost:8084/exemple-09B/example/xwork-validator-1.0.2.dtd&quot;&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">validators</span><span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field</span> <span style="color:#7f007f">name</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;model&quot;</span> <span style="color:#008080">&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">field-validator</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;visitor&quot;</span><span style="color:#008080">&gt;</span></span></span>
@@ -944,10 +943,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">validators</span><span style="color:#008080">&gt;</span></span></span>
 </code></pre></div>
 
-<p>لن نحاول شرح محتويات هذا الملف. سنأخذه على محمل الجد، مع الأخذ في الاعتبار الغرض منه: تفويض قواعد التحقق من الصحة إلى النموذج. قد تتساءل عن الغرض من ذلك. في الواقع، قد يكون النموذج وقواعد التحقق من الصحة والرسائل الخاصة به موجودة بالفعل وتستخدمها إجراءات مختلفة. بدلاً من تكرار نفس قواعد التحقق من الصحة والرسائل لإجراءات مختلفة، من الأفضل تفويض هذه الوظائف إلى النموذج.</p>
-<p>ملف [<bdi dir="ltr" class="odt-ltr-term">FormIntModel-validation.xml</bdi>] مطابق لملف [<bdi dir="ltr" class="odt-ltr-term">FormInt-validation.xml</bdi>] من الإصدار السابق.</p>
-<p>ملف [<bdi dir="ltr" class="odt-ltr-term">FormIntModel.properties</bdi>] مطابق لملف [<bdi dir="ltr" class="odt-ltr-term">FormInt.properties</bdi>] من الإصدار السابق.</p>
-<p>ندعو القراء إلى تجربة هذا الإصدار الجديد.</p>
+<p>لن نحاول شرح محتوى هذا الملف. سنأخذه كما هو مع تذكر وظيفته: نقل قواعد التحقق من الصحة إلى النموذج. قد يتساءل المرء عن فائدة ذلك. في الواقع، قد يكون النموذج وقواعد التحقق من صحة البيانات والرسائل الخاصة به موجودة مسبقًا وتُستخدم في إجراءات مختلفة. وبدلاً من تكرار نفس قواعد التحقق من صحة البيانات والرسائل في الإجراءات المختلفة، يُفضل تفويض هذه الوظائف إلى النموذج.</p>
+<p>الملف [<bdi dir="ltr" class="odt-ltr-term">FormIntModel-validation.xml</bdi>] مطابق للملف [<bdi dir="ltr" class="odt-ltr-term">FormInt-validation.xml</bdi>] من الإصدار السابق.</p>
+<p>الملف [<bdi dir="ltr" class="odt-ltr-term">FormIntModel.properties</bdi>] مطابق للملف [<bdi dir="ltr" class="odt-ltr-term">FormInt.properties</bdi>] من الإصدار السابق.</p>
+<p>ندعو القارئ إلى تجربة هذه النسخة الجديدة.</p>
 
 
 

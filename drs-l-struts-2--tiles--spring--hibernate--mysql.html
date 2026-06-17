@@ -467,14 +467,14 @@
   
   
     <li class="md-nav__item">
-      <a href="lmthl-05b---ltnql-fy-nmwdhj-dkhl-lbynt.html" class="md-nav__link">
+      <a href="mthl-05b---ltnql-fy-nmwdhj-ldkhl.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. المثال 05B – التنقل في نموذج إدخال البيانات
+    7. مثال 05B – التنقل في نموذج الإدخال
   
 
     
@@ -602,14 +602,14 @@
   
   
     <li class="md-nav__item">
-      <a href="lmthl-09b---ltqq-mn--lnmwdhj.html" class="md-nav__link">
+      <a href="mthl-09b---ltqq-mn--lnmwdhj.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. المثال 09B – التحقق من صحة النموذج
+    12. مثال 09B – التحقق من صحة النموذج
   
 
     
@@ -656,14 +656,14 @@
   
   
     <li class="md-nav__item">
-      <a href="lmthl-11---twyl-ltrykh-wltqq-mn-th.html" class="md-nav__link">
+      <a href="lmthl-11---twyl-ltwrykh-wltqq-mn-th.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. المثال 11 – تحويل التاريخ والتحقق من صحته
+    14. المثال 11 – تحويل التواريخ والتحقق من صحتها
   
 
     
@@ -683,14 +683,14 @@
   
   
     <li class="md-nav__item">
-      <a href="lmthl-12---twylt-wtqqt-mtnw.html" class="md-nav__link">
+      <a href="lmthl-12---mlyt-ltwyl-wltqq-mn-l-lmtnw.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. المثال 12 – تحويلات وتحققات متنوعة
+    15. المثال 12 – عمليات التحويل والتحقق من الصحة المتنوعة
   
 
     
@@ -849,7 +849,7 @@
   <a href="#183-jpa" class="md-nav__link">
     <span class="md-ellipsis">
       
-        18.3. كيانات JPA
+        18.3. الكيانات JPA
       
     </span>
   </a>
@@ -857,10 +857,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#184-indemnites" class="md-nav__link">
+  <a href="#184" class="md-nav__link">
     <span class="md-ellipsis">
       
-        18.4. طريقة قائمة على [INDEMNITES] لحساب راتب مقدم رعاية الأطفال
+        18.4. طريقة حساب راتب مربية الأطفال
       
     </span>
   </a>
@@ -868,10 +868,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#185" class="md-nav__link">
+  <a href="#185-metier" class="md-nav__link">
     <span class="md-ellipsis">
       
-        18.5. واجهة طبقة [الأعمال]
+        18.5. واجهة الطبقة [métier]
       
     </span>
   </a>
@@ -995,85 +995,86 @@
 
 
 
-<p><a id="refheading91770522158564"></a></p>
+<p><span id="refheading91770522158564" name="refheading91770522158564" class="odt-bookmark-anchor"></span></p>
 <h1 id="18-struts-2-tiles-spring-hibernate-mysql">18. <span style="color: #365f91">دراسة حالة: <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 / <bdi dir="ltr" class="odt-ltr-term">Tiles / Spring / Hibernate / MySQL</bdi></span></h1>
-<p>سنختتم مقدمتنا عن <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> بدراسة حالة. ولنكون واقعيين، فإن المثال الذي سندرسه سيكون أكثر تعقيدًا بكثير من تلك التي تمت تغطيتها سابقًا. بالنسبة للمبتدئين، من الأفضل ترسيخ فهمكم لأساسيات <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 من خلال مشاريع شخصية قبل الشروع في دراسة الحالة هذه.</p>
+<p>سنختتم تعلمنا لـ <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> بدراسة حالة. ولتحقيق الواقعية، سيكون المثال الذي سندرسه أكثر تعقيدًا بكثير من الأمثلة التي درسناها سابقًا. بالنسبة للمبتدئين، من الأفضل بلا شك التعمق في أساسيات <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2 من خلال تطبيقات شخصية قبل الشروع في دراسة هذه الحالة.</p>
 <p>سيستخدم التطبيق بنية متعددة الطبقات:</p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004E40000010E4B3B4132.png" width="626" height="135" style="display:inline-block; margin:4px;width:16.563cm;height:3.572cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E40000010E4B3B4132.png" /></td></tr></table>
 
-<p>سيتم توفير طبقات [<bdi dir="ltr" class="odt-ltr-term">business</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">DAO</bdi>] و [<bdi dir="ltr" class="odt-ltr-term">JPA/Hibernate</bdi>] لنا في شكل أرشيف <bdi dir="ltr" class="odt-ltr-term">JAR</bdi>، وسنقوم بتفصيل ميزاته. سيتولى <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> عملية تكامل هذه الطبقات. سيتم تنفيذ طبقة [web] باستخدام <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2.</p>
+<p>سيتم تزويدنا بمجموعة الطبقات [<bdi dir="ltr" class="odt-ltr-term">metier</bdi>] و [dao] و [<bdi dir="ltr" class="odt-ltr-term">jpa/hibernate</bdi>] في شكل ملف jar سنقوم بتفصيل وظائفه لاحقًا. وسيتم تكامل الطبقات بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> وسيتم تنفيذ الطبقة [web] بواسطة <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2.</p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000466000001B4AE6F0937.png" width="563" height="218" style="display:inline-block; margin:4px;width:14.896cm;height:5.768cm;" class="odt-zoomable" data-zoom-src="images/1000000000000466000001B4AE6F0937.png" /></td></tr></table>
 
-<p><a id="refheading91772522158564"></a></p>
+<p><span id="refheading91772522158564" name="refheading91772522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="181">18.1. <span style="color: #4f81bd">المشكلة</span></h2>
-<p>نقترح كتابة تطبيق ويب لإنشاء كشوف رواتب لمقدمي خدمات رعاية الأطفال العاملين في &quot;مركز الطفولة المبكرة&quot; التابع للبلدية.</p>
-<p><img src="images/100000000000031A00000345E4F75BE3.png" width="556" height="586" style="width:14.711cm;height:15.508cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031A00000345E4F75BE3.png" /></p>
+<p>نقترح كتابة تطبيق ويب يسمح بإعداد كشوف رواتب المربيات اللواتي يعملن في «دار الطفولة المبكرة» التابعة لإحدى البلديات.</p>
+<p><img src="images/100000000000031A00000345E4F75BE3.png" width="556" height="586" style="width:14.711cm;height:15.499cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031A00000345E4F75BE3.png" /></p>
 <p>يتم عرض دراسة الحالة هذه في الوثيقة:</p>
-<p><strong>مقدمة إلى <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> 5</strong> المتاح على الرابط [<bdi dir="ltr" class="odt-ltr-term">http://tahe.developpez.com/java/javaee</bdi>]</p>
-<p>في هذا المستند، تم تنفيذ دراسة الحالة باستخدام بنية متعددة المستويات التالية:</p>
+<p><strong>مقدمة إلى لغة جافا <bdi dir="ltr" class="odt-ltr-term">EE</bdi> 5</strong> المتاح على الرابط [<bdi dir="ltr" class="odt-ltr-term">http://tahe.developpez.com/java/javaee</bdi>]</p>
+<p>في هذا المستند، تم تنفيذ دراسة الحالة باستخدام البنية متعددة الطبقات التالية:</p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004FB00000109CB2D2940.png" width="638" height="133" style="display:inline-block; margin:4px;width:16.868cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/10000000000004FB00000109CB2D2940.png" /></td></tr></table>
 
-<p>يتم تنفيذ طبقة [الويب] باستخدام إطار عمل <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> (<bdi dir="ltr" class="odt-ltr-term">Java Server Faces</bdi>). سنعتمد هذه البنية نفسها من خلال تنفيذ طبقة [الويب] باستخدام <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2. لإظهار مزايا البنى الطبقية، سنستخدم أرشيف <bdi dir="ltr" class="odt-ltr-term">JAR</bdi> الذي يحتوي على طبقات [الأعمال، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] من إصدار <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> وربطه بطبقة [الويب / <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2]:</p>
+<p>يتم تنفيذ الطبقة [web] باستخدام إطار العمل <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> (<bdi dir="ltr" class="odt-ltr-term">Java Server Faces</bdi>). وسنستخدم هذه البنية نفسها عند تنفيذ الطبقة [web] باستخدام <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2. لإظهار فائدة البنى ذات الطبقات، سنستخدم ملف jar الخاص بطبقات [<bdi dir="ltr" class="odt-ltr-term">metier, dao, jpa</bdi>] من الإصدار <bdi dir="ltr" class="odt-ltr-term">JSF</bdi> ونربطه بطبقة [<bdi dir="ltr" class="odt-ltr-term">web / struts2</bdi>]:</p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004D50000011A2CDC3808.png" width="619" height="141" style="display:inline-block; margin:4px;width:16.365cm;height:3.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D50000011A2CDC3808.png" /></td></tr></table>
 
-<p>سنقدم المكونات التالية لطبقات [الأعمال، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>]:</p>
+<p>سنقدم العناصر التالية من الطبقات [<bdi dir="ltr" class="odt-ltr-term">metier, dao, jpa</bdi>]:</p>
 <ul>
-  <li>تتفاعل طبقة [الويب] مع طبقة [الأعمال]. سنقدم هذه الواجهة.
+  <li>تتصل الطبقة [web] بواجهة الطبقة [<bdi dir="ltr" class="odt-ltr-term">métier</bdi>]. سنعرض هذه الواجهة.
   </li>
-  <li>تصل طبقة [<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] إلى قاعدة البيانات. سنقدمها.
+  <li>تقوم الطبقة [jpa] بالوصول إلى قاعدة بيانات. وسنقوم بعرضها.
   </li>
-  <li>تقوم طبقة [<bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] بتحويل الصفوف من جداول قاعدة البيانات إلى كيانات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> التي تستخدمها جميع طبقات التطبيق. سنعرضها.
+  <li>تقوم الطبقة [jpa] بتحويل صفوف جداول قاعدة البيانات إلى كيانات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> يتم التعامل معها من قبل جميع طبقات التطبيق. وسنقوم بعرضها.
   </li>
-  <li>يتم إنشاء مثيلات طبقات [الأعمال، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> سنقدم ملف التكوين الذي يقوم بهذا الإنشاء والتكامل.
+  <li>يتم إنشاء مثيلات الطبقات [<bdi dir="ltr" class="odt-ltr-term">metier, dao, jpa</bdi>] بواسطة <bdi dir="ltr" class="odt-ltr-term">Spring.</bdi> سنقدم ملف التكوين الذي يقوم بعملية إنشاء المثيلات والتكامل هذه.
   </li>
 </ul>
-<p><a id="refheading87351112820228"></a></p>
+
+<p><span id="refheading87351112820228" name="refheading87351112820228" class="odt-bookmark-anchor"></span></p>
 <h2 id="182">18.2. <span style="color: #4f81bd">قاعدة البيانات</span></h2>
-<p>سنستخدم قاعدة بيانات <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> التالية [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_hibernate]:</p>
-<p><img src="images/10000000000001130000016A3B1E492F.png" width="138" height="181" style="width:3.639cm;height:4.791cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001130000016A3B1E492F.png" /></p>
+<p>سنستخدم قاعدة البيانات التالية: <bdi dir="ltr" class="odt-ltr-term">MySQL</bdi> [<bdi dir="ltr" class="odt-ltr-term">dbpam</bdi>_hibernate]:</p>
+<p><img src="images/10000000000001130000016A3B1E492F.png" width="138" height="181" style="width:3.639cm;height:4.789cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001130000016A3B1E492F.png" /></p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;">&nbsp;</td></tr></table>
 
 <ul>
-  <li>في [1]، تحتوي قاعدة البيانات على ثلاثة جداول:
+  <li>في [1]، تحتوي قاعدة البيانات على ثلاث جداول:
   </li>
-  <li>[<bdi dir="ltr" class="odt-ltr-term">employees</bdi>]: جدول يسجل موظفي مركز رعاية الأطفال
+  <li>[<bdi dir="ltr" class="odt-ltr-term">employes</bdi>]: جدول يسجل الموظفات في حضانة
   </li>
-  <li>[<bdi dir="ltr" class="odt-ltr-term">contributions</bdi>]: جدول يخزن معدلات اشتراكات الضمان الاجتماعي
+  <li>[<bdi dir="ltr" class="odt-ltr-term">cotisations</bdi>]: جدول يسجل معدلات الاشتراكات الاجتماعية
   </li>
-  <li>[<bdi dir="ltr" class="odt-ltr-term">indemnites</bdi>]: جدول يخزن المعلومات المستخدمة لحساب رواتب الموظفين
+  <li>[<bdi dir="ltr" class="odt-ltr-term">indemnites</bdi>]: جدول يسجل المعلومات اللازمة لحساب رواتب الموظفات
   </li>
 </ul>
 
-<p><strong>جدول [<bdi dir="ltr" class="odt-ltr-term">employees</bdi>]</strong></p>
+<p><strong>الجدول [<bdi dir="ltr" class="odt-ltr-term">employes</bdi>]</strong></p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004C20000015AB83A53B5.png" width="609" height="173" style="display:inline-block; margin:4px;width:16.113cm;height:4.577cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C20000015AB83A53B5.png" /></td></tr></table>
 
 <ul>
-  <li>في [2]، جدول الموظفين، وفي [3]، معنى حقوله
-  </li>
-</ul>
-
-<p>يمكن أن يكون محتوى الجدول كما يلي:</p>
-<p><img src="images/10000000000002D500000045B8BBDC06.png" width="499" height="48" style="width:13.212cm;height:1.258cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D500000045B8BBDC06.png" /></p>
-<p><strong>الجدول [<bdi dir="ltr" class="odt-ltr-term">contributions</bdi>]</strong></p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000053700000171BCB3C6F5.png" width="668" height="185" style="display:inline-block; margin:4px;width:17.662cm;height:4.882cm;" class="odt-zoomable" data-zoom-src="images/100000000000053700000171BCB3C6F5.png" /></td></tr></table>
-
-<ul>
-  <li>في [4]، جدول المساهمات، وفي [5]، معنى حقوله
-  </li>
-</ul>
-
-<p>يمكن أن يكون محتوى الجدول كما يلي:</p>
-<p><img src="images/10000000000001CF000000305ED6EA6C.png" width="324" height="34" style="width:8.571cm;height:0.889cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001CF000000305ED6EA6C.png" /></p>
-<p><strong>الجدول [<bdi dir="ltr" class="odt-ltr-term">indemnites</bdi>]</strong></p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000535000001129FCCE31E.png" width="667" height="137" style="display:inline-block; margin:4px;width:17.635cm;height:3.625cm;" class="odt-zoomable" data-zoom-src="images/1000000000000535000001129FCCE31E.png" /></td></tr></table>
-
-<ul>
-  <li>في [6]، جدول البدلات، وفي [7]، معنى حقوله
+  <li>في [2]، جدول الموظفين، وفي [3]، معاني حقوله
   </li>
 </ul>
 
 <p>قد يكون محتوى الجدول كما يلي:</p>
-<p><img src="images/10000000000002C300000042137D36D7.png" width="495" height="46" style="width:13.09cm;height:1.222cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002C300000042137D36D7.png" /></p>
+<p><img src="images/10000000000002D500000045B8BBDC06.png" width="499" height="47" style="width:13.212cm;height:1.256cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002D500000045B8BBDC06.png" /></p>
+<p><strong>الجدول [<bdi dir="ltr" class="odt-ltr-term">cotisations</bdi>]</strong></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/100000000000053700000171BCB3C6F5.png" width="668" height="185" style="display:inline-block; margin:4px;width:17.662cm;height:4.882cm;" class="odt-zoomable" data-zoom-src="images/100000000000053700000171BCB3C6F5.png" /></td></tr></table>
+
+<ul>
+  <li>في [4]، جدول الاشتراكات، وفي [5]، معنى حقوله
+  </li>
+</ul>
+
+<p>قد يكون محتوى الجدول كما يلي:</p>
+<p><img src="images/10000000000001CF000000305ED6EA6C.png" width="324" height="34" style="width:8.571cm;height:0.891cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001CF000000305ED6EA6C.png" /></p>
+<p><strong>الجدول [<bdi dir="ltr" class="odt-ltr-term">indemnites</bdi>]</strong></p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/1000000000000535000001129FCCE31E.png" width="667" height="137" style="display:inline-block; margin:4px;width:17.635cm;height:3.625cm;" class="odt-zoomable" data-zoom-src="images/1000000000000535000001129FCCE31E.png" /></td></tr></table>
+
+<ul>
+  <li>في [6]، جدول التعويضات، وفي [7]، معنى حقولها
+  </li>
+</ul>
+
+<p>قد يكون محتوى الجدول كما يلي:</p>
+<p><img src="images/10000000000002C300000042137D36D7.png" width="495" height="46" style="width:13.09cm;height:1.221cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002C300000042137D36D7.png" /></p>
 <p>يؤدي تصدير بنية قاعدة البيانات إلى ملف <bdi dir="ltr" class="odt-ltr-term">SQL</bdi> إلى النتيجة التالية:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -1124,7 +1125,7 @@
 <span class="normal"><a href="#__codelineno-0-47">47</a></span>
 <span class="normal"><a href="#__codelineno-0-48">48</a></span>
 <span class="normal"><a href="#__codelineno-0-49">49</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">#</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="o">#</span><span class="w"> </span><span class="k">Structure</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">`</span><span class="n">cotisations</span><span class="o">`</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="o">#</span><span class="w"> </span><span class="err">هيكل</span><span class="w"> </span><span class="err">جدول</span><span class="w"> </span><span class="o">`</span><span class="n">cotisations</span><span class="o">`</span><span class="p">:</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="o">#</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">cotisations</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
@@ -1138,7 +1139,7 @@
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">4</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">latin1</span><span class="p">;</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="o">#</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="o">#</span><span class="w"> </span><span class="k">Structure</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">`</span><span class="n">indemnites</span><span class="o">`</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="p">:</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="o">#</span><span class="w"> </span><span class="err">هيكل</span><span class="w"> </span><span class="err">جدول</span><span class="w"> </span><span class="o">`</span><span class="n">indemnites</span><span class="o">`</span><span class="p">:</span>
 <a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="o">#</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a>
 <a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">indemnites</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
@@ -1154,7 +1155,7 @@
 <a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">9</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">latin1</span><span class="p">;</span>
 <a id="__codelineno-0-30" name="__codelineno-0-30"></a>
 <a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="o">#</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="o">#</span><span class="w"> </span><span class="k">Structure</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">`</span><span class="n">employes</span><span class="o">`</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="p">:</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="o">#</span><span class="w"> </span><span class="err">هيكل</span><span class="w"> </span><span class="err">جدول</span><span class="w"> </span><span class="o">`</span><span class="n">employes</span><span class="o">`</span><span class="p">:</span>
 <a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="o">#</span>
 <a id="__codelineno-0-34" name="__codelineno-0-34"></a>
 <a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="o">`</span><span class="n">employes</span><span class="o">`</span><span class="w"> </span><span class="p">(</span>
@@ -1173,25 +1174,25 @@
 <a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="o">`</span><span class="n">FK_EMPLOYES_INDEMNITE_ID</span><span class="o">`</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">INDEMNITE_ID</span><span class="o">`</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="o">`</span><span class="n">indemnites</span><span class="o">`</span><span class="w"> </span><span class="p">(</span><span class="o">`</span><span class="n">ID</span><span class="o">`</span><span class="p">)</span>
 <a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="p">)</span><span class="w"> </span><span class="n">ENGINE</span><span class="o">=</span><span class="n">InnoDB</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="o">=</span><span class="mi">7</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">CHARSET</span><span class="o">=</span><span class="n">latin1</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-<p><a id="refheading91774522158564"></a></p>
-<h2 id="183-jpa">18.3. <span style="color: #4f81bd">كيانات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi></span></h2>
+<p><span id="refheading91774522158564" name="refheading91774522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="183-jpa">18.3. <span style="color: #4f81bd">الكيانات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi></span></h2>
 <p>في البنية التالية</p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000004F50000011163BB4F74.png" width="635" height="137" style="display:inline-block; margin:4px;width:16.789cm;height:3.612cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F50000011163BB4F74.png" /></td></tr></table>
 
-<p>تعمل طبقة [<bdi dir="ltr" class="odt-ltr-term">Jpa</bdi>] كجسر بين الكائنات التي تتعامل معها طبقة [dao] والصفوف في جداول قاعدة البيانات التي يتعامل معها برنامج تشغيل <bdi dir="ltr" class="odt-ltr-term">Jdbc.</bdi> يتم تحويل الصفوف التي يتم قراءتها من جداول قاعدة البيانات إلى كائنات تسمى كيانات <bdi dir="ltr" class="odt-ltr-term">JPA.</bdi> وبالمقابل، أثناء الكتابة، يتم تحويل كيانات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> إلى صفوف في الجداول. يتم التعامل مع هذه الكيانات من قبل جميع الطبقات، ولا سيما طبقة الويب. لذلك، نحتاج إلى فهمها:</p>
-<p>يمثل كيان [<bdi dir="ltr" class="odt-ltr-term">Employee</bdi>] صفًا في جدول [<bdi dir="ltr" class="odt-ltr-term">Employees</bdi>]</p>
-<p><bdi dir="ltr" class="odt-ltr-term">ID:</bdi> المفتاح الأساسي من النوع <bdi dir="ltr" class="odt-ltr-term">autoincrement VERSION:</bdi> رقم إصدار السجل <bdi dir="ltr" class="odt-ltr-term">FIRST</bdi>_NAME: الاسم الأول للموظف <bdi dir="ltr" class="odt-ltr-term">LAST</bdi>_NAME: لقب الموظفة <bdi dir="ltr" class="odt-ltr-term">ADDRESS:</bdi> عنوان الموظفة <bdi dir="ltr" class="odt-ltr-term">ZIP:</bdi> الرمز البريدي للموظف/الموظفة <bdi dir="ltr" class="odt-ltr-term">CITY:</bdi> المدينة التي يقيم فيها الموظف/الموظفة <bdi dir="ltr" class="odt-ltr-term">INDEMNITY</bdi>_ID: مفتاح خارجي مرتبط بـ <bdi dir="ltr" class="odt-ltr-term">INDEMNITIES</bdi>(<bdi dir="ltr" class="odt-ltr-term">ID</bdi>)  </p>
-<p><img src="images/1000000000000163000000CBCEC3582C.png" width="248" height="142" style="width:6.57cm;height:3.757cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000163000000CBCEC3582C.png" /></p>
-<p>كيان [<bdi dir="ltr" class="odt-ltr-term">Employee</bdi>] هو كما يلي:</p>
+<p>تقوم الطبقة [<bdi dir="ltr" class="odt-ltr-term">Jpa</bdi>] بدور الجسر بين الكائنات التي تتعامل معها الطبقة [dao] وخطوط جداول قاعدة البيانات التي يتعامل معها برنامج التشغيل <bdi dir="ltr" class="odt-ltr-term">Jdbc.</bdi> يتم تحويل خطوط الجداول التي يتم قراءتها من قاعدة البيانات إلى كائنات تسمى كيانات <bdi dir="ltr" class="odt-ltr-term">Jpa.</bdi> وعلى العكس، عند الكتابة، تُحوَّل كيانات <bdi dir="ltr" class="odt-ltr-term">JPA</bdi> إلى صفوف في الجداول. يتم التعامل مع هذه الكيانات من قِبل جميع الطبقات، ولا سيما طبقة الويب. لذا، يتعين علينا التعرف عليها:</p>
+<p>يمثل الكيان [<bdi dir="ltr" class="odt-ltr-term">Employe</bdi>] صفًّا في الجدول [<bdi dir="ltr" class="odt-ltr-term">Employes</bdi>]</p>
+<p><img src="images/1000000000000163000000CBCEC3582C.png" width="248" height="142" style="width:6.57cm;height:3.761cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000163000000CBCEC3582C.png" /></p>
+<p><bdi dir="ltr" class="odt-ltr-term">ID:</bdi> المفتاح الأساسي من النوع «التزايد التلقائي»<bdi dir="ltr" class="odt-ltr-term">VERSION:</bdi> رقم إصدار السجل<bdi dir="ltr" class="odt-ltr-term">PRENOM:</bdi> الاسم الأول للموظفة<bdi dir="ltr" class="odt-ltr-term">NOM:</bdi> اسمها<bdi dir="ltr" class="odt-ltr-term">ADRESSE:</bdi> عنوانها<bdi dir="ltr" class="odt-ltr-term">CP:</bdi> الرمز البريدي الخاص بها<bdi dir="ltr" class="odt-ltr-term">VILLE:</bdi> مدينتها<bdi dir="ltr" class="odt-ltr-term">INDEMNITE</bdi>_ID: المفتاح الأجنبي في <bdi dir="ltr" class="odt-ltr-term">INDEMNITES</bdi>(<bdi dir="ltr" class="odt-ltr-term">ID</bdi>)</p>
+<p>الكيان [<bdi dir="ltr" class="odt-ltr-term">Employe</bdi>] هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> jpa;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">...</span><span style="color:#000000"></span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#646464">@</span><span style="color:#000000">Entity</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#646464">@</span><span style="color:#000000">Table(name=</span><span style="color:#2a00ff">&quot;EMPLOYES&quot;</span><span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Employe </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> Serializable {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Id</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">GeneratedValue(strategy = GenerationType.AUTO)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Long id;</span></span></span>
@@ -1213,11 +1214,11 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">ManyToOne</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">JoinColumn(name=</span><span style="color:#2a00ff">&quot;INDEMNITE_ID&quot;</span><span style="color:#000000">,nullable=</span><span style="font-weight:bold;color:#7f0055">false</span><span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Indemnite indemnite;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Employe() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Employe(String SS, String nom, String prenom, String adresse, String ville, String codePostal, Indemnite indemnite){</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    setSS(SS);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    setNom(nom);</span></span>
@@ -1227,7 +1228,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    setCodePostal(codePostal);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    setIndemnite(indemnite);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String toString() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> </span><span style="color:#2a00ff">&quot;jpa.Employe[id=&quot;</span><span style="color:#000000"> + getId()</span></span></span>
@@ -1241,26 +1242,26 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    +</span><span style="color:#2a00ff">&quot;,indice=&quot;</span><span style="color:#000000">+getIndemnite().getIndice()</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    +</span><span style="color:#2a00ff">&quot;]&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getters and setters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// دالات الاسترجاع والتعيين</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">   ...  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>سنتجاهل التعليقات التوضيحية @ المخصصة لطبقة [<bdi dir="ltr" class="odt-ltr-term">Jpa</bdi>]. تعكس الحقول المختلفة للفئة الأعمدة المختلفة لجدول [<bdi dir="ltr" class="odt-ltr-term">EMPLOYEES</bdi>]. يعكس حقل التعويضات (السطر 29) حقيقة أن جدول [<bdi dir="ltr" class="odt-ltr-term">EMPLOYEES</bdi>] يحتوي على مفتاح خارجي في جدول [<bdi dir="ltr" class="odt-ltr-term">INDEMNITIES</bdi>]. عندما نقوم بمعالجة موظف، فإننا نقوم أيضًا بمعالجة تعويضاته.</p>
-<p>الكيان [<bdi dir="ltr" class="odt-ltr-term">Indemnite</bdi>] هو تمثيل الكائن لصف في جدول [<bdi dir="ltr" class="odt-ltr-term">INDEMNITIES</bdi>]:</p>
-<p><bdi dir="ltr" class="odt-ltr-term">ID:</bdi> مفتاح أساسي ذاتي التزايد <bdi dir="ltr" class="odt-ltr-term">VERSION:</bdi> رقم إصدار السجل <bdi dir="ltr" class="odt-ltr-term">BASE</bdi>_HEURE: التكلفة باليورو لساعة واحدة من الخدمة تحت الطلب <bdi dir="ltr" class="odt-ltr-term">DAILY</bdi>_MAINTENANCE: البدل اليومي باليورو <bdi dir="ltr" class="odt-ltr-term">MEAL</bdi>_DAY: بدل الوجبات باليورو لكل يوم رعاية <bdi dir="ltr" class="odt-ltr-term">PAID</bdi>_LEAVE_ALLOWANCES: بدلات الإجازة المدفوعة. وهي نسبة مئوية تُطبق على الراتب الأساسي.  </p>
-<p><img src="images/100000000000019D0000009D663003AE.png" width="266" height="101" style="width:7.04cm;height:2.676cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000019D0000009D663003AE.png" /></p>
+<p>سيتم تجاهل التعليقات @ المخصصة للطبقة [<bdi dir="ltr" class="odt-ltr-term">Jpa</bdi>]. تعكس الحقول المختلفة للفئة الأعمدة المختلفة في الجدول [<bdi dir="ltr" class="odt-ltr-term">EMPLOYES</bdi>]. يعكس الحقل <bdi dir="ltr" class="odt-ltr-term">indemnites</bdi> (السطر 29) حقيقة أن الجدول [<bdi dir="ltr" class="odt-ltr-term">EMPLOYES</bdi>] يحتوي على مفتاح خارجي مرتبط بالجدول [<bdi dir="ltr" class="odt-ltr-term">INDEMNITES</bdi>]. فعند معالجة بيانات موظف ما، يتم أيضًا معالجة بدلاته.</p>
+<p>الكيان [<bdi dir="ltr" class="odt-ltr-term">Indemnite</bdi>] هو تعبير كائن لسطر في الجدول [<bdi dir="ltr" class="odt-ltr-term">INDEMNITES</bdi>]:</p>
+<p><img src="images/100000000000019D0000009D663003AE.png" width="266" height="101" style="width:7.04cm;height:2.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000019D0000009D663003AE.png" /></p>
+<p><bdi dir="ltr" class="odt-ltr-term">ID</bdi> مفتاح أساسي من نوع التزايد التلقائي<bdi dir="ltr" class="odt-ltr-term">VERSIONn</bdi>رقم إصدار السجل <bdi dir="ltr" class="odt-ltr-term">BASE</bdi>_HEURE التكلفة باليورو لساعة الحراسة <bdi dir="ltr" class="odt-ltr-term">ENTRETIEN</bdi>_JOUR بدل الحراسة باليورو لكل يوم حراسة <bdi dir="ltr" class="odt-ltr-term">REPAS</bdi>_JOUR بدل الوجبات باليورو لكل يوم حراسة <bdi dir="ltr" class="odt-ltr-term">INDEMNITES</bdi>_CP بدلات الإجازات المدفوعة الأجر. وهي نسبة مئوية تُطبق على الراتب الأساسي.</p>
 <p>الكيان [<bdi dir="ltr" class="odt-ltr-term">Indemnite</bdi>] هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> jpa;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">...</span><span style="color:#000000"></span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#646464">@</span><span style="color:#000000">Entity</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#646464">@</span><span style="color:#000000">Table(name=</span><span style="color:#2a00ff">&quot;INDEMNITES&quot;</span><span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Indemnite </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> Serializable {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Id</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">GeneratedValue(strategy = GenerationType.AUTO)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Long id;</span></span></span>
@@ -1277,10 +1278,10 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> repasJour;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Column(name=</span><span style="color:#2a00ff">&quot;INDEMNITES_CP&quot;</span><span style="color:#000000">,nullable=</span><span style="font-weight:bold;color:#7f0055">false</span><span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> indemnitesCP;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Indemnite() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Indemnite(</span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> indice, </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> baseHeure, </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> entretienJour, </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> repasJour, </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> indemnitesCP){</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    setIndice(indice);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    setBaseHeure(baseHeure);</span></span>
@@ -1300,26 +1301,26 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    +</span><span style="color:#2a00ff">&quot;,indemnités CP=&quot;</span><span style="color:#000000">+getIndemnitesCP()</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    + </span><span style="color:#2a00ff">&quot;]&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getters and setters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// دالات الاسترجاع والتعيين</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">....</span>  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>تعكس الحقول المختلفة للفئة الأعمدة المختلفة لجدول [<bdi dir="ltr" class="odt-ltr-term">INDEMNITIES</bdi>].</p>
-<p>الكيان [<bdi dir="ltr" class="odt-ltr-term">Cotisation</bdi>] هو تمثيل الكائن لصف في جدول [<bdi dir="ltr" class="odt-ltr-term">COTISATIONS</bdi>]:</p>
-<p><bdi dir="ltr" class="odt-ltr-term">ID:</bdi> المفتاح الأساسي من نوع التزايد التلقائي <bdi dir="ltr" class="odt-ltr-term">VERSION:</bdi> رقم إصدار السجل <bdi dir="ltr" class="odt-ltr-term">SECU:</bdi> معدل اشتراك الضمان الاجتماعي (نسبة مئوية) <bdi dir="ltr" class="odt-ltr-term">socialPENSION:</bdi> معدل اشتراك المعاش التقاعدي <bdi dir="ltr" class="odt-ltr-term">CSGD:</bdi> معدل الاشتراك في الضمان الاجتماعي العام <bdi dir="ltr" class="odt-ltr-term">Generalized Deductible:</bdi> المبلغ المقتطع العام <bdi dir="ltr" class="odt-ltr-term">CSGRDS:</bdi> معدل الاشتراك في سداد الديون الاجتماعية  </p>
-<p><img src="images/100000000000017C000000916AACFD59.png" width="266" height="102" style="width:7.04cm;height:2.686cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000916AACFD59.png" /></p>
-<p>الكيان [<bdi dir="ltr" class="odt-ltr-term">Contribution</bdi>] هو كما يلي:</p>
+<p>تعكس الحقول المختلفة للفئة الأعمدة المختلفة في الجدول [<bdi dir="ltr" class="odt-ltr-term">INDEMNITES</bdi>].</p>
+<p>الكيان [<bdi dir="ltr" class="odt-ltr-term">Cotisation</bdi>] هو التعبير الذي يمثل أحد صفوف الجدول [<bdi dir="ltr" class="odt-ltr-term">COTISATIONS</bdi>]:</p>
+<p><img src="images/100000000000017C000000916AACFD59.png" width="266" height="101" style="width:7.04cm;height:2.679cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000017C000000916AACFD59.png" /></p>
+<p><bdi dir="ltr" class="odt-ltr-term">ID</bdi> مفتاح أساسي من نوع التزايد التلقائي<bdi dir="ltr" class="odt-ltr-term">VERSION</bdi> رقم إصدار السجل<bdi dir="ltr" class="odt-ltr-term">SECU</bdi> نسبة (النسبة المئوية) لاشتراكات الضمان الاجتماعي <bdi dir="ltr" class="odt-ltr-term">RETRAITE</bdi> معدل اشتراكات التقاعد <bdi dir="ltr" class="odt-ltr-term">CSGD</bdi> معدل اشتراكات المساهمة الاجتماعية العامة القابلة للخصم <bdi dir="ltr" class="odt-ltr-term">CSGRD</bdi> معدل اشتراكات المساهمة الاجتماعية العامة والمساهمة في سداد الدين الاجتماعي</p>
+<p>الكيان [<bdi dir="ltr" class="odt-ltr-term">Cotisation</bdi>] هو كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> jpa;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">...</span><span style="color:#000000"></span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#646464">@</span><span style="color:#000000">Entity</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#646464">@</span><span style="color:#000000">Table(name=</span><span style="color:#2a00ff">&quot;COTISATIONS&quot;</span><span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Cotisation </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> Serializable {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Id</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">GeneratedValue(strategy = GenerationType.AUTO)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Long id;</span></span></span>
@@ -1334,35 +1335,35 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> secu;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Column(name=</span><span style="color:#2a00ff">&quot;RETRAITE&quot;</span><span style="color:#000000">,nullable=</span><span style="font-weight:bold;color:#7f0055">false</span><span style="color:#000000">)</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> retraite;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Cotisation() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Cotisation(</span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> csgrds, </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> csgd, </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> secu, </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> retraite){</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    setCsgrds(csgrds);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    setCsgd(csgd);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    setSecu(secu);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    setRetraite(retraite);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String toString() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> </span><span style="color:#2a00ff">&quot;jpa.Cotisation[id=&quot;</span><span style="color:#000000"> + getId() + </span><span style="color:#2a00ff">&quot;,version=&quot;</span><span style="color:#000000"> + getVersion()+</span><span style="color:#2a00ff">&quot;,csgrds=&quot;</span><span style="color:#000000">+getCsgrds()+</span><span style="color:#2a00ff">&quot;&quot;</span><span style="color:#000000"> +</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#2a00ff">&quot;,csgd=&quot;</span><span style="color:#000000">+getCsgd()+</span><span style="color:#2a00ff">&quot;,secu=&quot;</span><span style="color:#000000">+getSecu()+</span><span style="color:#2a00ff">&quot;,retraite=&quot;</span><span style="color:#000000">+getRetraite()+</span><span style="color:#2a00ff">&quot;]&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getters and setters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// دالات الاسترجاع والتعيين</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  ...</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>تعكس الحقول المختلفة للفئة الأعمدة المختلفة لجدول [<bdi dir="ltr" class="odt-ltr-term">INDEMNITES</bdi>].</p>
-<p><a id="mode-calcul-salaire"></a>
-<a id="refheading87353112820228"></a></p>
-<h2 id="184-indemnites">18.4. <span style="color: #4f81bd">طريقة قائمة على [<bdi dir="ltr" class="odt-ltr-term">INDEMNITES</bdi>] لحساب راتب مقدم رعاية الأطفال</span></h2>
-<p>سيسمح لنا التطبيق الويب الذي سنقوم بكتابته بحساب راتب الموظف بناءً على ثلاث معلومات:</p>
+<p>تعكس الحقول المختلفة للفئة الأعمدة المختلفة في الجدول [<bdi dir="ltr" class="odt-ltr-term">INDEMNITES</bdi>].</p>
+<p><span id="refheading87353112820228" name="refheading87353112820228" class="odt-bookmark-anchor"></span>
+<span id="mode-calcul-salaire" name="mode-calcul-salaire" class="odt-bookmark-anchor"></span></p>
+<h2 id="184">18.4. <span style="color: #4f81bd"><strong>طريقة حساب راتب مربية الأطفال</strong></span></h2>
+<p>سيسمح لنا تطبيق الويب الذي سنقوم بكتابته بحساب راتب الموظفة بناءً على ثلاث معلومات:</p>
 <ul>
-  <li>مؤشر الموظف
+  <li>رقم الموظفة
   </li>
   <li>عدد أيام العمل
   </li>
@@ -1370,85 +1371,82 @@
   </li>
 </ul>
 
-<p>فيما يلي لقطة شاشة لحساب الراتب:</p>
-<p><img src="images/100000000000031A00000345E4F75BE3.png" width="556" height="586" style="width:14.711cm;height:15.508cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031A00000345E4F75BE3.png" /></p>
-<p>سنعرض الآن طريقة حساب الراتب الشهري لمقدم رعاية الأطفال. لا يُقصد من هذه الطريقة أن تُستخدم في الواقع. كمثال، سنستخدم راتب السيدة ماري جوفينال، التي عملت 150 ساعة على مدار 20 يومًا خلال فترة الدفع.</p>
-<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يتم أخذ العوامل التالية في الاعتبار:</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">[<span style="background-color:#ffcc99">TOTALHOURS</span>]: إجمالي ساعات العمل في الشهر</span></span>
+<p>فيما يلي لقطة شاشة لعملية حساب الراتب:</p>
+<p><img src="images/100000000000031A00000345E4F75BE3.png" width="556" height="586" style="width:14.711cm;height:15.499cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000031A00000345E4F75BE3.png" /></p>
+<p>نقدم الآن طريقة حساب الراتب الشهري لمربية أطفال. ولا يُقصد بها أن تكون هي الطريقة المستخدمة في الواقع. نأخذ كمثال راتب السيدة ماري جوفينال التي عملت 150 ساعة على مدار 20 يومًا خلال الشهر محل الدفع.</p>
+<table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يتم أخذ العناصر التالية في الاعتبار:</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">[<span style="background-color:#ffcc99">TOTALHEURES</span>]: total des heures travaillées dans le mois</span></span>
 </code></pre></div>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">[<span style="background-color:#ffcc99">TOTALDAYS</span>]: إجمالي عدد أيام العمل في الشهر</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">[<span style="background-color:#ffcc99">TOTALJOURS</span>]: total des jours travaillés dans le mois</span></span>
 </code></pre></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[TOTALHOURS]=150
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>[TOTALDAYS] = 20
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[TOTALHEURES]=150
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>[TOTALJOURS]= 20
 </code></pre></div>
-</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">الراتب الأساسي لـ</div><div style="margin:0 0 0.5em 0">يُحسب بالصيغة التالية</div><div style="margin:0 0 0.5em 0"> :</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content"><span style="background-color:#ffcc99">[الراتب الأساسي]=([إجمالي الساعات]*[السعر </span><span style="background-color:#ffcc99">بالساعة])*(1+[بدل CP]/100)</span></span></span>
+</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يُحسب الراتب الأساسي لمساعدة</div><div style="margin:0 0 0.5em 0">يُحسب وفقًا للصيغة</div><div style="margin:0 0 0.5em 0"> التالية:</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="background-color:#ffcc99">[SALAIREBASE]=([TOTALHEURES]*[BASEHEURE])*(1+[INDEMNITESCP]/100)</span><span style="background-color:#ffcc99"></span></span></span>
 </code></pre></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[الراتب الأساسي] = (150 * [2.1]) * (1 + 0.15) = 362.25
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[SALAIREBASE]=(150*[2.1])*(1+0.15)= 362,25
 </code></pre></div>
-</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يجب خصم مبلغ معين من اشتراكات الضمان الاجتماعي</div><div style="margin:0 0 0.5em 0">يجب خصمه من هذا الراتب الأساسي</div><div style="margin:0 0 0.5em 0">:</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">الاشتراك الاجتماعي العام واشتراك سداد الدين الاجتماعي: <span style="background-color:#ffcc99">[الراتب الأساسي]*[CSGRDS/100]</span></span></span>
-</code></pre></div>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">الاشتراك الاجتماعي العام القابل للخصم: <span style="background-color:#ffcc99">[الراتب الأساسي]*[CSGD/100]</span></span></span>
+</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">يجب اقتطاع عدد معين من الاشتراكات الاجتماعية</div><div style="margin:0 0 0.5em 0">يجب اقتطاعها من هذا الراتب</div><div style="margin:0 0 0.5em 0">الأساسي:</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">Contribution sociale généralisée et contribution au remboursement de la dette sociale : <span style="background-color:#ffcc99">[SALAIREBASE]*[CSGRDS/100]</span></span></span>
 </code></pre></div>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">الضمان الاجتماعي، استحقاقات الأرامل، الشيخوخة: <span style="background-color:#ffcc99">[الراتب الأساسي]*[نسبة الضمان الاجتماعي/100]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">Contribution sociale généralisée déductible : <span style="background-color:#ffcc99">[SALAIREBASE]*[CSGD/100]</span></span></span>
 </code></pre></div>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span class="odt-code-line-content">المعاش التكميلي + صندوق التقاعد العام (AGPF) + التأمين ضد البطالة: <span style="background-color:#ffcc99">[الراتب الأساسي]*[PENSION/100]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">Sécurité sociale, veuvage, vieillesse : <span style="background-color:#ffcc99">[SALAIREBASE]*[SECU/100]</span></span></span>
+</code></pre></div>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content">Retraite Complémentaire + AGPF + Assurance Chômage : <span style="background-color:#ffcc99">[SALAIREBASE]*[RETRAITE/100]</span></span></span>
 </code></pre></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>CSGRDS: 12.64
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>CSGRDS : 12,64
 </code></pre></div>
 </div>
 <div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>CSGD: 22.28
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>CSGD : 22,28
 </code></pre></div>
 </div>
 <div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>الضمان الاجتماعي: 34.02
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Sécurité sociale : 34,02
 </code></pre></div>
 </div>
 <div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>المعاش التقاعدي: 28.55
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Retraite : 28,55
 </code></pre></div>
-</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">إجمالي اشتراكات الضمان الاجتماعي:</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>[SOCIALCONTRIBUTIONS] = [BASESALARY] * (CSGRDS + CSGD + SECU + RETIREMENT) / 100
+</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">إجمالي الاشتراكات الاجتماعية:</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="background-color:#ffcc99">[COTISATIONSSOCIALES]=[SALAIREBASE]*(CSGRDS+CSGD+SECU+RETRAITE)/100</span><span style="background-color:#ffcc99"></span></span></span>
+</code></pre></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>[COTISATIONSSOCIALES]=97,48
 </code></pre></div>
-</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>[SOCIALCONTRIBUTIONS]=97.48
+</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">بالإضافة إلى ذلك، يحق للمربية،</div><div style="margin:0 0 0.5em 0">عن كل يوم عمل، إلى بدل</div><div style="margin:0 0 0.5em 0">إعالة بالإضافة إلى بدل</div><div style="margin:0 0 0.5em 0">وجبة. وبهذا الصدد، تتلقى البدلات</div><div style="margin:0 0 0.5em 0"> التالية:</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="background-color:#ffcc99">[</span><span style="background-color:#ffcc99">Indemnités</span><span style="background-color:#ffcc99">]=[TOTALJOURS]*(ENTRETIENJOUR+REPASJOUR)</span></span></span>
+</code></pre></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>[INDEMNITES]=104
 </code></pre></div>
-</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">بالإضافة إلى ذلك، يحق لمقدم رعاية الأطفال،</div><div style="margin:0 0 0.5em 0">عن كل يوم عمل، إلى</div><div style="margin:0 0 0.5em 0">بالإضافة إلى بدل وجبات</div><div style="margin:0 0 0.5em 0">. وبالتالي، فإنها تتلقى</div><div style="margin:0 0 0.5em 0"> :</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>[البدلات] = [إجمالي_الأيام] * (البدل_اليومي_للإعاشة + بدل_الوجبة_اليومي)
-</code></pre></div>
-</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>[البدلات]=104
-</code></pre></div>
-</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">وفي النهاية، يكون الراتب الصافي الذي سيُدفع لمقدمة رعاية الأطفال كما يلي:</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>[الراتب الأساسي] - [اشتراكات الضمان الاجتماعي] + [البدلات]
-</code></pre></div>
-</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>[الراتب الصافي] = 368.77
+</div></td></tr><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div style="margin:0 0 0.5em 0">وفي النهاية، يكون الراتب الصافي المستحق للمربية كما يلي:</div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="background-color:#ffcc99">[SALAIREBASE]-[COTISATIONSSOCIALES]+[INDEMNITÉS]</span><span style="background-color:#ffcc99"></span></span></span>
+</code></pre></div></td><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>[salaire NET]=368,77
 </code></pre></div>
 </div></td></tr></table>
 
-<p><a id="refheading91776522158564"></a></p>
-<h2 id="185">18.5. <span style="color: #4f81bd"><strong>واجهة طبقة [الأعمال]</strong></span></h2>
-<p>دعونا نلقي نظرة على بنية التطبيق الذي نقوم ببنائه:</p>
+<p><span id="refheading91776522158564" name="refheading91776522158564" class="odt-bookmark-anchor"></span></p>
+<h2 id="185-metier">18.5. <span style="color: #4f81bd">واجهة الطبقة [<bdi dir="ltr" class="odt-ltr-term">métier</bdi>]</span></h2>
+<p>لنعد إلى بنية التطبيق الذي نقوم بإنشائه:</p>
 <table dir="rtl" class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td dir="rtl" style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: right;"><img src="images/10000000000005060000011099A38967.png" width="643" height="136" style="display:inline-block; margin:4px;width:17.013cm;height:3.598cm;" class="odt-zoomable" data-zoom-src="images/10000000000005060000011099A38967.png" /></td></tr></table>
 
-<p>تتواصل طبقة [الويب / <bdi dir="ltr" class="odt-ltr-term">Struts</bdi> 2] مع واجهة طبقة [الأعمال]. ويتم ذلك على النحو التالي:</p>
+<p>تتواصل الطبقة [<bdi dir="ltr" class="odt-ltr-term">web / struts</bdi> 2] مع واجهة الطبقة [<bdi dir="ltr" class="odt-ltr-term">métier</bdi>]. وهذه الواجهة هي كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> metier;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.List;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> jpa.Employe;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">interface</span><span style="color:#000000"> IMetier {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// get your payslip</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// الحصول على كشف الراتب</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  FeuilleSalaire calculerFeuilleSalaire(String SS, </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> nbHeuresTravaillées, </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> nbJoursTravaillés );</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// list of employees</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// قائمة الموظفين</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  List&lt;Employe&gt; findAllEmployes();</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
@@ -1456,78 +1454,78 @@
 <ul>
   <li>السطر 8: الطريقة التي ستسمح لنا بحساب راتب الموظف
   </li>
-  <li>السطر 10: الطريقة التي ستسمح لنا بتعبئة القائمة المنسدلة للموظفين
+  <li>السطر 10: الطريقة التي ستسمح لنا بملء قائمة الموظفين المنسدلة
   </li>
 </ul>
 
-<p>تُرجع الطريقة <em><bdi dir="ltr" class="odt-ltr-term">calculatePaystub</bdi></em> مثيلًا لفئة [<bdi dir="ltr" class="odt-ltr-term">Paystub</bdi>] التالية:</p>
+<p>تُرجع الطريقة <em><bdi dir="ltr" class="odt-ltr-term">calculerFeuillesalaire</bdi></em> مثيلًا من الفئة [<bdi dir="ltr" class="odt-ltr-term">FeuilleSalaire</bdi>] التالية:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> metier;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.io.Serializable;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> jpa.Cotisation;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> jpa.Employe;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> FeuilleSalaire </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> Serializable {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// private fields</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// الحقول الخاصة</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Employe employe;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> Cotisation cotisation;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> ElementsSalaire elementsSalaire;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// manufacturers</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// المنشئات</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> FeuilleSalaire() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> FeuilleSalaire(Employe employe, Cotisation cotisation,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">          ElementsSalaire elementsSalaire) {</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    setEmploye(employe);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    setCotisation(cotisation);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    setElementsSalaire(elementsSalaire);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// toString</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String toString() {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> </span><span style="color:#2a00ff">&quot;[&quot;</span><span style="color:#000000"> + employe + </span><span style="color:#2a00ff">&quot;,&quot;</span><span style="color:#000000"> + cotisation + </span><span style="color:#2a00ff">&quot;,&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">            + elementsSalaire + </span><span style="color:#2a00ff">&quot;]&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getters and setters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// دالات الاسترجاع والتعيين</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  ...</span><span style="color:#000000"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
-<p>تحتوي كعب الراتب على المعلومات التالية:</p>
+<p>تحتوي ورقة الراتب على المعلومات التالية:</p>
 <ul>
   <li>السطر 10: معلومات عن الموظف الذي يتم حساب راتبه
   </li>
   <li>السطر 11: معدلات الاشتراكات المختلفة
   </li>
-  <li>السطر 12: مكونات الراتب
+  <li>السطر 12: عناصر الراتب
   </li>
 </ul>
 
-<p>فئة [<bdi dir="ltr" class="odt-ltr-term">ElementsSalaire</bdi>] هي كما يلي:</p>
+<p>الفئة [<bdi dir="ltr" class="odt-ltr-term">ElementsSalaire</bdi>] هي كما يلي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> metier;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.io.Serializable;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> ElementsSalaire </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> Serializable{</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// private fields</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// الحقول الخاصة</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> salaireBase;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> cotisationsSociales;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> indemnitesEntretien;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> indemnitesRepas;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> salaireNet;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// manufacturers</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// منشئات</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> ElementsSalaire() {</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> ElementsSalaire(</span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> salaireBase, </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> cotisationsSociales,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> indemnitesEntretien, </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> indemnitesRepas,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> salaireNet) {</span></span></span>
@@ -1537,7 +1535,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    setIndemnitesRepas(indemnitesRepas);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    setSalaireNet(salaireNet);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// toString</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#646464">@</span><span style="color:#000000">Override</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String toString() {</span></span></span>
@@ -1545,8 +1543,8 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      + indemnitesEntretien + </span><span style="color:#2a00ff">&quot;,indemnités de repas=&quot;</span><span style="color:#000000"> + indemnitesRepas + </span><span style="color:#2a00ff">&quot;,salaire net=&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      + salaireNet + </span><span style="color:#2a00ff">&quot;]&quot;</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// getters and setters</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// دالات الاسترجاع والتعيين</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  ...</span><span style="color:#000000"></span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
@@ -1556,28 +1554,28 @@
   </li>
 </ul>
 
-<p><a id="refheading91778522158564"></a></p>
+<p><span id="refheading91778522158564" name="refheading91778522158564" class="odt-bookmark-anchor"></span></p>
 <h2 id="186-spring">18.6. <span style="color: #4f81bd">ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi></span></h2>
-<p>يتم التعامل مع تكامل طبقات [الأعمال، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] بواسطة ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> التالي:</p>
+<p>يتم تكامل طبقات [<bdi dir="ltr" class="odt-ltr-term">métier, dao, jpa</bdi>] بواسطة ملف تكوين <bdi dir="ltr" class="odt-ltr-term">Spring</bdi> التالي:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#800080">&lt;beans</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.springframework.org/schema/beans</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">xmlns:xsi</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.w3.org/2001/XMLSchema-instance</span><span style="color:#800080">&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#008080">       </span><span style="color:#808000">xmlns:tx</span><span style="color:#800080">=&quot;</span><span style="color:#000080">http://www.springframework.org/schema/tx</span><span style="color:#800080">&quot;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#008080">       </span><span style="color:#808000">xsi:schemaLocation</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd</span><span style="color:#800080">&quot;&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- طبقات التطبيق --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- application layers --&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- business --&gt;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">&lt;!-- المجال المهني --&gt;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">metier</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">metier.Metier</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">employeDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">ref</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">employeDao</span><span style="color:#800080">&quot;/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">cotisationDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">ref</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">cotisationDao</span><span style="color:#800080">&quot;/&gt;</span><span style="color:#000000">  </span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!--  dao --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!--  DAO --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">employeDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">dao.EmployeDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">indemniteDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">dao.IndemniteDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">cotisationDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">dao.CotisationDao</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- configuration JPA --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- التكوين JPA --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">entityManagerFactory</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">dataSource</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">ref</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">dataSource</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">jpaVendorAdapter</span><span style="color:#800080">&quot;&gt;</span></span></span>
@@ -1589,32 +1587,32 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;/property&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- the DBCP data source --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- مصدر البيانات DBCP --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">dataSource</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">org.apache.commons.dbcp.BasicDataSource</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">destroy-method</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">close</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">driverClassName</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">com.mysql.jdbc.Driver</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">url</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">jdbc:mysql://localhost:3306/dbpam_hibernate</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">username</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">root</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">password</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">value</span><span style="color:#800080">=&quot;&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- transaction manager --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- مدير المعاملات --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;tx:annotation-driven</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">transaction-manager</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">txManager</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">id</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">txManager</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">org.springframework.orm.jpa.JpaTransactionManager</span><span style="color:#800080">&quot;&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#800080">&lt;property</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">name</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">entityManagerFactory</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">ref</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">entityManagerFactory</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;/bean&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- translation of exceptions --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- ترجمة الاستثناءات --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- persistence --&gt;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">&lt;!-- الاستمرارية --&gt;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#800080">&lt;bean</span><span style="font-style:italic;color:#008080"> </span><span style="color:#808000">class</span><span style="color:#800080">=&quot;</span><span style="color:#0000ff">org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor</span><span style="color:#800080">&quot;</span><span style="font-style:italic;color:#008080"> </span><span style="color:#800080">/&gt;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content"> </span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  </span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;/beans&gt;</span></span>
 </code></pre></div>
 
-<p>لن نحاول شرح هذا التكوين. فهو ضروري لإنشاء مثيلات طبقات [الأعمال، <bdi dir="ltr" class="odt-ltr-term">DAO</bdi>، <bdi dir="ltr" class="odt-ltr-term">JPA</bdi>] وتكاملها. ولذلك، يجب أن يتبنى تطبيق الويب الخاص بنا، الذي سيعتمد على هذه الطبقات، هذا التكوين. لاحظ أن الأسطر 32– –37 تكوّن خصائص <bdi dir="ltr" class="odt-ltr-term">JDBC</bdi> لقاعدة البيانات. يجب على القراء الذين يرغبون في تغيير قاعدة البيانات تعديل هذه الأسطر.</p>
-<p>لمزيد من المعلومات حول هذا التكوين، راجع الوثيقة <strong>&quot;مقدمة إلى <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> 5&quot;</strong> المتوفرة على الرابط [<bdi dir="ltr" class="odt-ltr-term">http://tahe.developpez.com/java/javaee</bdi>].</p>
+<p>لن نحاول شرح هذا التكوين. فهو ضروري لإنشاء مثيل الطبقات [<bdi dir="ltr" class="odt-ltr-term">métier, dao, jpa</bdi>] ودمجها. لذلك، يجب أن تتبنى تطبيقنا على الويب، الذي سيعتمد على هذه الطبقات، هذا التكوين. تجدر الإشارة إلى أن الأسطر من 32 إلى 37 تُكوّن خصائص <bdi dir="ltr" class="odt-ltr-term">Jdbc</bdi> لقاعدة البيانات. يجب على القارئ الذي يرغب في تغيير قاعدة البيانات تعديل هذه الأسطر.</p>
+<p>لمزيد من المعلومات حول هذا التكوين، يمكن الرجوع إلى الوثيقة <strong>«مقدمة إلى <bdi dir="ltr" class="odt-ltr-term">Java EE</bdi> 5»</strong> المتوفرة على الرابط [<bdi dir="ltr" class="odt-ltr-term">http://tahe.developpez.com/java/javaee</bdi>].</p>
 
 
 
